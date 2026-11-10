@@ -1,0 +1,38 @@
+DO COMMIT AO CÓDIGO — APRESENTAÇÃO WEB
+
+COMO ABRIR
+1. Extraia este ZIP para uma pasta.
+2. Abra index.html em um navegador moderno (Chrome, Edge, Firefox, Safari).
+3. Não é necessário servidor, instalação, npm nem conexão de internet para os slides e interações. Os arquivos CSS/JS são locais. As fontes personalizadas usam Google Fonts quando há internet; sem internet, fontes alternativas são usadas automaticamente.
+
+ATALHOS
+← / →: navegar pelos slides
+Espaço ou PageDown: próximo slide
+Home / End: primeiro / último slide
+F: tela cheia
+G: índice geral dos slides
+N: notas do palestrante
+Esc: fechar painel/índice
+
+FUNCIONALIDADES
+- 31 telas, baseadas na palestra de 50 minutos.
+- Painel com notas específicas para cada slide.
+- Simulador ilustrativo do ciclo Git.
+- Copiar exemplos de comandos para a área de transferência.
+- Quiz com revelação de respostas.
+- Layout responsivo, navegação por toque e animações.
+- URLs diretas para slides (#1, #2... #31).
+
+ARQUIVOS
+index.html — estrutura e conteúdo completo dos slides da apresentação
+styles.css — todo o design, animações e responsividade
+script.js — lógica de navegação, atalhos, notas, simulador e interações
+
+FONTES OFICIAIS
+https://git-scm.com/book/pt-br/v2
+https://git-scm.com/docs
+https://docs.github.com/pt/get-started
+https://docs.github.com/pt/get-started/using-github/github-flow
+
+OBSERVAÇÃO
+Os comandos de terminal são exemplos de ensino. Para publicar um projeto real no GitHub é necessário configurar autenticação e substituir USUARIO pelos dados corretos.

@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080d1a" />
+  <meta name="description"
+    content="Apresentação interativa: Do Commit ao Código — Git e GitHub na prática, 50 minutos." />
+  <title>Do Commit ao Código | Git + GitHub na prática</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="noise"></div>
+  <div id="app" class="shell">
+    <!-- Topbar: Identidade e Ações Rápidas -->
+    <header class="topbar">
+      <div class="identity">
+        <span class="brand-mark" aria-hidden="true"><span>⌘</span></span>
+        <span class="brand-text">Guilherme<span class="brand-dot">.</span>Berson</span>
+        <span class="top-divider"></span>
+        <span class="top-topic">GIT / GITHUB</span>
+      </div>
+      <div class="top-actions">
+        <span class="live-pill"><i></i> APRESENTAÇÃO INTERATIVA</span>
+        <button id="overviewBtn" class="icon-btn" title="Visão geral (G)" aria-label="Ver todos os slides">▦</button>
+        <button id="notesBtn" class="icon-btn" title="Notas do palestrante (N)" aria-label="Mostrar notas">☷</button>
+        <button id="fullscreenBtn" class="icon-btn" title="Tela cheia (F)" aria-label="Tela cheia">⛶</button>
+      </div>
+    </header>
+    <!-- Palco Principal (Slides) -->
+    <main id="stage" class="stage" tabindex="-1" aria-live="polite">
+      <!-- Slide 1: Do Commit ao Código -->
+      <article class="slide slide-scroll slide-cover active" id="slide-1" data-slide="1" data-section="ABERTURA"
+        data-timing="0:00" data-title="Do Commit ao Código">
+        <div class="cover-shape"><svg viewBox="0 0 300 300" aria-hidden="true">
+            <defs>
+              <linearGradient id="branchG" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#41e9da" />
+                <stop offset="1" stop-color="#9c89ff" />
+              </linearGradient>
+            </defs>
+            <path d="M90 48V230M90 143C90 100 210 115 210 65M90 180C90 224 210 218 210 265" stroke="url(#branchG)"
+              stroke-width="12" fill="none" stroke-linecap="round" />
+            <circle cx="90" cy="48" r="23" fill="#0a1528" stroke="#43e1d0" stroke-width="10" />
+            <circle cx="210" cy="65" r="23" fill="#0a1528" stroke="#8d9bff" stroke-width="10" />
+            <circle cx="90" cy="230" r="23" fill="#0a1528" stroke="#43e1d0" stroke-width="10" />
+            <circle cx="210" cy="265" r="23" fill="#0a1528" stroke="#8d9bff" stroke-width="10" />
+          </svg></div>
+        <span class="cover-kicker">⌁ MASTERCLASS · DESENVOLVIMENTO DE SOFTWARE</span>
+        <h1 class="cover-title">Do Commit<br><span class="grad">ao Código<span class="brand-dot">.</span></span></h1>
+        <p class="cover-lead">Git e GitHub na prática: do primeiro repositório ao trabalho colaborativo em equipe.</p>
+        <div class="cover-bottom">
+          <div class="hero-stat"><strong>100%</strong><span>MÃO NA MASSA</span></div>
+        </div>
+        <span class="shortcuts">Navegue com <b>←</b> <b>→</b> · pressione <b>F</b> para tela cheia</span>
+        <aside class="slide-notes">Abertura: pergunte à plateia quem já perdeu uma versão de trabalho ou precisou juntar
+          modificações de duas pessoas. Apresente a promessa: entender a lógica do versionamento, não apenas decorar
+          comandos.</aside>
+      </article>
+
+      <!-- Slide 2: Sobre o Palestrante -->
+      <article class="slide slide-scroll" id="slide-2" data-slide="2" data-section="SOBRE MIM" data-timing="1 min"
+        data-title="Sobre o Palestrante">
+        <div class="deck-heading"><span class="eyebrow">APRESENTAÇÃO</span>
+          <h1 class="title">Guilherme <span class="grad">Berson</span></h1>
+          <p class="subtitle">Engenheiro de Software &amp; Especialista em IA / Mobile</p>
+        </div>
+        <div class="main-grid">
+          <div class="panel cyan">
+            <div class="big-icon">⌘</div>
+            <h3>Carreira &amp; Atuação</h3>
+            <p>Engenheiro de Software com foco em ecossistema mobile (Android/iOS) e desenvolvimento de soluções
+              escaláveis.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">🎓</div>
+            <h3>Formação &amp; Especialidade</h3>
+            <p>Pós-graduado em Inteligência Artificial e Desenvolvimento Mobile, apaixonado por arquitetura de código e
+              práticas de versionamento.</p>
+          </div>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Android &amp; Swift</span>
+          <span class="chip">Inteligência Artificial</span>
+          <span class="chip">Arquitetura de Software</span>
+          <span class="chip">Web Angular</span>
+        </div>
+        <aside class="slide-notes">Apresente-se brevemente: conte um pouco sobre sua trajetória, sua experiência com
+          versionamento/Git no dia a dia do mercado e por que dominar esse fluxo é indispensável na carreira técnica.
+        </aside>
+      </article>
+
+      <!-- Slide 3: O que você será capaz de fazer -->
+      <article class="slide slide-scroll" id="slide-3" data-slide="3" data-section="INTRODUÇÃO" data-timing="1 min"
+        data-title="O que você será capaz de fazer">
+        <div class="deck-heading"><span class="eyebrow">ROTEIRO / OBJETIVOS</span>
+          <h1 class="title">O que você será capaz <span class="grad">de fazer</span></h1>
+          <p class="subtitle">Ao final, você terá o mapa completo de um fluxo real de versionamento e colaboração.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">01</div>
+            <h3>Entender</h3>
+            <p>Explicar o que o Git registra e o que o GitHub acrescenta.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">02</div>
+            <h3>Versionar</h3>
+            <p>Criar repositórios, preparar alterações e registrar commits.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">03</div>
+            <h3>Colaborar</h3>
+            <p>Criar branches, abrir pull requests e revisar código.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Resultado:</strong> sair de uma pasta local e chegar a um fluxo de desenvolvimento
+          em equipe.</div>
+        <aside class="slide-notes">Objetivos e sequência. Não é necessário instalar nada para acompanhar o conceito.
+          Para a parte prática, Git e uma conta GitHub ajudam.</aside>
+      </article>
+      <!-- Slide 4: O problema das versões -->
+      <article class="slide slide-scroll" id="slide-4" data-slide="4" data-section="FUNDAMENTOS" data-timing="2 min"
+        data-title="O problema das versões">
+        <div class="deck-heading"><span class="eyebrow">CONTEXTO</span>
+          <h1 class="title">O caos do <span class="grad">projeto_final_v3.zip</span></h1>
+          <p class="subtitle">O que acontece quando o versionamento depende de cópias manuais?</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel red">
+            <div class="big-icon">×</div>
+            <h3>Sem controle</h3>
+            <p>Versões duplicadas, alterações sobrescritas e dificuldade para rastrear responsáveis.</p>
+          </div>
+          <div class="panel cyan">
+            <div class="big-icon">✓</div>
+            <h3>Com Git</h3>
+            <p>Histórico rastreável, comparação de alterações e linhas paralelas de trabalho.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">↗</div>
+            <h3>Com GitHub</h3>
+            <p>Repositório remoto, discussão, revisão e integração de contribuições.</p>
+          </div>
+        </div>
+        <div class="callout">Exemplo real: duas pessoas editam o mesmo arquivo. <strong>Qual é a versão
+            correta?</strong> O versionamento organiza essa resposta.</div>
+        <aside class="slide-notes">Faça a analogia dos arquivos com nomes “final”, “final2”, “final_agora_sim”. Controle
+          de versão resolve rastreabilidade e coordenação, não necessariamente evita todo conflito.</aside>
+      </article>
+      <!-- Slide 5: Controle de versão -->
+      <article class="slide slide-scroll" id="slide-5" data-slide="5" data-section="FUNDAMENTOS" data-timing="2 min"
+        data-title="Controle de versão">
+        <div class="deck-heading"><span class="eyebrow">CONCEITO</span>
+          <h1 class="title">Controle de versão: <span class="grad">a ideia central</span></h1>
+          <p class="subtitle">Sistema que registra mudanças para comparar, rastrear, recuperar e colaborar.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><small>01 / HISTÓRICO</small><b>Rastrear</b><span>Quem e quando</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>02 / DIFF</small><b>Comparar</b><span>O que mudou</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>03 / REVERT</small><b>Recuperar</b><span>Restaurar versões</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>04 / BRANCH</small><b>Colaborar</b><span>Trabalho paralelo</span></div>
+        </div>
+        <div class="big-statement">Uma boa história de commits transforma mudanças dispersas em uma <span
+            class="grad">evolução compreensível</span> do produto.</div>
+        <aside class="slide-notes">Explique que commit representa snapshot lógico do conteúdo preparado. Git armazena
+          objetos de forma eficiente. O valor é ter uma narrativa técnica auditável.</aside>
+      </article>
+      <!-- Slide 6: Git ≠ GitHub -->
+      <article class="slide slide-scroll" id="slide-6" data-slide="6" data-section="FUNDAMENTOS" data-timing="2 min"
+        data-title="Git ≠ GitHub">
+        <div class="deck-heading"><span class="eyebrow">DIFERENÇA ESSENCIAL</span>
+          <h1 class="title"><span class="grad">Git</span> ≠ GitHub</h1>
+          <p class="subtitle">Ferramenta de versionamento versus plataforma de hospedagem e colaboração.</p>
+        </div>
+        <div class="main-grid comparison">
+          <div class="panel cyan">
+            <div class="big-icon">⌘</div>
+            <h3>Git · mecanismo</h3>
+            <p>Sistema de controle de versões <strong>distribuído</strong>. Gerencia commits, branches, merges e
+              histórico, inclusive sem internet.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">↗</div>
+            <h3>GitHub · plataforma</h3>
+            <p>Hospeda repositórios Git e oferece <strong>pull requests</strong>, issues, reviews, permissões e
+              automações.</p>
+          </div>
+          <span class="versus">VS</span>
+        </div>
+        <div class="callout">Você pode usar <strong>Git sem GitHub</strong>; GitHub é uma das plataformas possíveis para
+          colaboração sobre repositórios Git.</div>
+        <aside class="slide-notes">Uma analogia útil: Git é o motor de versionamento; GitHub oferece infraestrutura e
+          uma interface social/colaborativa. GitLab e Bitbucket são alternativas.</aside>
+      </article>
+      <!-- Slide 7: Modelo distribuído -->
+      <article class="slide slide-scroll" id="slide-7" data-slide="7" data-section="FUNDAMENTOS" data-timing="1 min"
+        data-title="Modelo distribuído">
+        <div class="deck-heading"><span class="eyebrow">ARQUITETURA</span>
+          <h1 class="title">Um modelo <span class="grad">distribuído</span></h1>
+          <p class="subtitle">Cada clone contém o histórico Git relevante do repositório, permitindo commits locais.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><small>01 / LOCAL</small><b>Computador A</b><span>Commit offline</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>02 / REMOTO</small><b>GitHub / origin</b><span>Compartilhamento</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>03 / LOCAL</small><b>Computador B</b><span>Clone e commits</span></div>
+        </div>
+        <div class="chip-row"><span class="chip">A → origin : git push</span><span class="chip">origin → B : git fetch /
+            pull</span><span class="chip">remote ≠ backup automático</span></div>
+        <aside class="slide-notes">Destaque que push e pull não são automáticos. Cada máquina tem repositório próprio;
+          “origin” é um apelido convencional do remoto.</aside>
+      </article>
+      <!-- Slide 8: Configuração do Git -->
+      <article class="slide slide-scroll" id="slide-8" data-slide="8" data-section="PRIMEIROS PASSOS"
+        data-timing="2 min" data-title="Configuração do Git">
+        <div class="deck-heading"><span class="eyebrow">COMEÇANDO</span>
+          <h1 class="title">Primeiro, configure <span class="grad">sua identidade</span></h1>
+          <p class="subtitle">Os campos de autoria aparecem no histórico dos commits.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20--version%0A%0Agit%20config%20--global%20user.name%20%22Seu%20Nome%22%0Agit%20config%20--global%20user.email%20%22voce%40exemplo.com%22%0A%0Agit%20config%20--global%20--list"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> --version
+                  <span class="cmd">git</span> config --global user.name &quot;Seu Nome&quot;
+                  <span class="cmd">git</span> config --global user.email &quot;voce@exemplo.com&quot;
+                  <span class="cmd">git</span> config --global --list</pre>
+        </div>
+        <div class="callout"><strong>Importante:</strong> nome e e-mail configurados são metadados do commit; não são,
+          por si só, suas credenciais de autenticação no GitHub.</div>
+        <aside class="slide-notes">Explique --global versus --local. Verifique se o terminal reconhece git. No GitHub,
+          autenticação HTTPS pode usar credential manager/token, ou SSH com chave configurada.</aside>
+      </article>
+      <!-- Slide 9: Criar repositório -->
+      <article class="slide slide-scroll" id="slide-9" data-slide="9" data-section="PRIMEIROS PASSOS"
+        data-timing="2 min" data-title="Criar repositório">
+        <div class="deck-heading"><span class="eyebrow">REPOSITÓRIO</span>
+          <h1 class="title">Da pasta ao <span class="grad">repositório Git</span></h1>
+          <p class="subtitle">git init cria a estrutura de versionamento na pasta atual.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="mkdir%20minha-aplicacao%0Acd%20minha-aplicacao%0A%0Agit%20init%20-b%20main%0A%0Aecho%20%22%23%20Minha%20aplica%C3%A7%C3%A3o%22%20%3E%20README.md%0Agit%20status"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">mkdir</span> minha-aplicacao
+                      <span class="cmd">cd</span> minha-aplicacao
+                      <span class="cmd">git</span> init -b main
+                      <span class="cmd">echo</span> &quot;# Minha aplicação&quot; &gt; README.md
+                      <span class="cmd">git</span> status</pre>
+        </div>
+        <div class="chip-row"><span class="chip">.git/ = dados do repositório</span><span class="chip">README.md =
+            documentação</span><span class="chip">main = branch inicial</span></div>
+        <aside class="slide-notes">Mostre a diferença entre arquivo normal de projeto e metadados ocultos no diretório
+          .git. “git init -b main” depende de versão compatível do Git.</aside>
+      </article>
+      <!-- Slide 10: Ciclo de uma alteração -->
+      <article class="slide slide-scroll" id="slide-10" data-slide="10" data-section="VERSIONAMENTO" data-timing="2 min"
+        data-title="Ciclo de uma alteração">
+        <div class="deck-heading"><span class="eyebrow">MODELO MENTAL</span>
+          <h1 class="title">Da edição ao <span class="grad">push</span></h1>
+          <p class="subtitle">O caminho mais importante de toda a palestra.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><small>01 / EDITAR</small><b>Working tree</b><span>Arquivo alterado</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>02 / GIT ADD</small><b>Staging area</b><span>Selecionar snapshot</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>03 / GIT COMMIT</small><b>Local repository</b><span>Criar registro</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>04 / GIT PUSH</small><b>Remote</b><span>Publicar commits</span></div>
+        </div>
+        <div class="callout">A staging area (index) permite <strong>selecionar exatamente o que entra</strong> no
+          próximo commit. O commit é local; o push envia ao remoto.</div>
+        <aside class="slide-notes">Ponto-chave: working tree, staging area e repositório local não são a mesma coisa.
+          Aproveite o simulador no slide seguinte para reforçar.</aside>
+      </article>
+      <!-- Slide 11: Simulador Git -->
+      <article class="slide slide-scroll" id="slide-11" data-slide="11" data-section="VERSIONAMENTO" data-timing="2 min"
+        data-title="Simulador Git">
+        <div class="deck-heading"><span class="eyebrow">DEMONSTRAÇÃO INTERATIVA</span>
+          <h1 class="title">O ciclo Git <span class="grad">em movimento</span></h1>
+          <p class="subtitle">Clique nas ações para visualizar como uma modificação percorre cada etapa.</p>
+        </div>
+        <div class="simulator">
+          <div class="sim-visual">
+            <div id="simWork" class="sim-node active">
+              <div><strong>01 · Working tree</strong><br><small>README.md modificado</small></div>
+              <span>✎</span>
+            </div>
+            <div id="simStage" class="sim-node">
+              <div><strong>02 · Staging area</strong><br><small>mudanças preparadas</small></div>
+              <span>＋</span>
+            </div>
+            <div id="simLocal" class="sim-node">
+              <div><strong>03 · Repositório local</strong><br><small>commit registrado</small></div>
+              <span>◈</span>
+            </div>
+            <div id="simRemote" class="sim-node">
+              <div><strong>04 · GitHub / origin</strong><br><small>commit publicado</small></div>
+              <span>☁</span>
+            </div>
+          </div>
+          <div class="panel cyan"><span class="mini-tag">TERMINAL SIMULADO</span>
+            <h3 id="simTitle">Tudo começa com um arquivo editado.</h3>
+            <div class="sim-output" id="simOutput">$ git status<br>modified: README.md</div>
+            <div class="sim-actions"><button class="action-btn" id="simAdvance">EXECUTAR PRÓXIMO →</button><button
+                class="action-btn" id="simReset">↺ REINICIAR</button></div>
+            <p class="sim-note">Esta simulação é ilustrativa: não altera nenhum repositório real.</p>
+          </div>
+        </div>
+        <aside class="slide-notes">Clique em executar próximo: add, commit, push. Diferencie o estágio e o repositório.
+          Use este slide para aferir se a plateia compreendeu o fluxo.</aside>
+      </article>
+      <!-- Slide 12: Primeiro commit -->
+      <article class="slide slide-scroll" id="slide-12" data-slide="12" data-section="VERSIONAMENTO" data-timing="2 min"
+        data-title="Primeiro commit">
+        <div class="deck-heading"><span class="eyebrow">DEMONSTRAÇÃO</span>
+          <h1 class="title">Seu <span class="grad">primeiro commit</span></h1>
+          <p class="subtitle">Um commit registra um snapshot do que foi preparado.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20status%0Agit%20add%20README.md%0Agit%20diff%20--staged%0A%0Agit%20commit%20-m%20%22docs%3A%20adiciona%20README%20inicial%22%0A%0Agit%20log%20--oneline"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> status
+                                  <span class="cmd">git</span> add README.md
+                                  <span class="cmd">git</span> diff --staged
+                                  <span class="cmd">git</span> commit -m &quot;docs: adiciona README inicial&quot;
+                                  <span class="cmd">git</span> log --oneline</pre>
+        </div>
+        <div class="callout"><strong>Sequência:</strong> inspecionar → preparar → revisar → registrar → conferir
+          histórico.</div>
+        <aside class="slide-notes">Após o add, o diff --staged confirma o conteúdo do próximo commit. Git commit não
+          publica no GitHub. O hash é um identificador do objeto commit.</aside>
+      </article>
+      <!-- Slide 13: Histórico e diferenças -->
+      <article class="slide slide-scroll" id="slide-13" data-slide="13" data-section="VERSIONAMENTO" data-timing="1 min"
+        data-title="Histórico e diferenças">
+        <div class="deck-heading"><span class="eyebrow">CONTROLE</span>
+          <h1 class="title">Enxergue o <span class="grad">histórico</span></h1>
+          <p class="subtitle">Não trabalhe às cegas: confira o estado e compare alterações.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20status%0Agit%20log%20--oneline%20--graph%20--decorate%0Agit%20diff%0Agit%20diff%20--staged%0Agit%20show%20HEAD"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> status
+                                      <span class="cmd">git</span> log --oneline --graph --decorate
+                                      <span class="cmd">git</span> diff
+                                      <span class="cmd">git</span> diff --staged
+                                      <span class="cmd">git</span> show HEAD</pre>
+        </div>
+        <div class="chip-row"><span class="chip">diff → alterações não preparadas</span><span class="chip">diff --staged
+            → alterações preparadas</span><span class="chip">log → histórico</span></div>
+        <aside class="slide-notes">Explique a diferença entre diff e diff --staged. git show HEAD exibe detalhes do
+          commit atualmente apontado por HEAD.</aside>
+      </article>
+      <!-- Slide 14: Boas mensagens -->
+      <article class="slide slide-scroll" id="slide-14" data-slide="14" data-section="VERSIONAMENTO" data-timing="1 min"
+        data-title="Boas mensagens">
+        <div class="deck-heading"><span class="eyebrow">BOAS PRÁTICAS</span>
+          <h1 class="title">Um bom commit <span class="grad">conta uma história</span></h1>
+          <p class="subtitle">Faça alterações pequenas, coesas e com mensagens que expressem intenção.</p>
+        </div>
+        <div class="main-grid">
+          <div class="panel cyan">
+            <div class="big-icon">✓</div>
+            <h3>Mensagens claras</h3>
+            <p>
+              <code>feat: adiciona validação de e-mail</code><br><code>fix: corrige cálculo do frete</code><br><code>docs: atualiza instruções</code>
+            </p>
+          </div>
+          <div class="panel red">
+            <div class="big-icon">×</div>
+            <h3>Mensagens fracas</h3>
+            <p><code>ajustes</code><br><code>coisas</code><br><code>subi tudo</code><br><code>agora vai final</code></p>
+          </div>
+        </div>
+        <div class="callout">Convenções como <strong>Conventional Commits</strong> são opcionais, mas ajudam na
+          consistência e na automação de releases.</div>
+        <aside class="slide-notes">Não apresente Conventional Commits como obrigação do Git: é uma convenção de
+          mensagens. Prefira mensagem imperativa, escopo e intenção claros.</aside>
+      </article>
+      <!-- Slide 15: Publicar no GitHub -->
+      <article class="slide slide-scroll" id="slide-15" data-slide="15" data-section="GITHUB" data-timing="2 min"
+        data-title="Publicar no GitHub">
+        <div class="deck-heading"><span class="eyebrow">REMOTO</span>
+          <h1 class="title">Seu código no <span class="grad">GitHub</span></h1>
+          <p class="subtitle">Crie primeiro um repositório vazio no GitHub e conecte-o ao repositório local.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="%23%20No%20GitHub%3A%20crie%20um%20reposit%C3%B3rio%20VAZIO%0Agit%20remote%20add%20origin%20https%3A%2F%2Fgithub.com%2FUSUARIO%2Fminha-aplicacao.git%0A%0Agit%20push%20-u%20origin%20main%0A%0Agit%20remote%20-v"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="comment"># No GitHub: crie um repositório VAZIO</span>
+                                          <span class="cmd">git</span> remote add origin https://github.com/USUARIO/minha-aplicacao.git
+                                          <span class="cmd">git</span> push -u origin main
+                                          <span class="cmd">git</span> remote -v</pre>
+        </div>
+        <div class="callout"><strong>origin</strong> é o nome do remoto. <strong>-u</strong> configura a relação de
+          acompanhamento (upstream) da branch, facilitando comandos futuros.</div>
+        <aside class="slide-notes">A URL é um exemplo; substitua USUARIO. Para evitar histórico divergente no primeiro
+          push, não marque a opção de criar README no remoto se você já o criou localmente.</aside>
+      </article>
+      <!-- Slide 16: Clonar e sincronizar -->
+      <article class="slide slide-scroll" id="slide-16" data-slide="16" data-section="GITHUB" data-timing="1 min"
+        data-title="Clonar e sincronizar">
+        <div class="deck-heading"><span class="eyebrow">SINCRONIZAÇÃO</span>
+          <h1 class="title">Clone, fetch, pull <span class="grad">e push</span></h1>
+          <p class="subtitle">Quatro operações comuns, mas com responsabilidades diferentes.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20clone%20https%3A%2F%2Fgithub.com%2FUSUARIO%2Fminha-aplicacao.git%0A%0Agit%20fetch%20origin%20%20%20%20%20%20%20%23%20busca%20objetos%20e%20refer%C3%AAncias%0Agit%20pull%20origin%20main%20%20%20%20%23%20busca%20e%20integra%20altera%C3%A7%C3%B5es%0Agit%20push%20origin%20main%20%20%20%20%23%20envia%20commits%20locais"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> clone https://github.com/USUARIO/minha-aplicacao.git
+                                              <span class="cmd">git</span> fetch origin       # busca objetos e referências
+                                              <span class="cmd">git</span> pull origin main    # busca e integra alterações
+                                              <span class="cmd">git</span> push origin main    # envia commits locais</pre>
+        </div>
+        <div class="callout"><strong>git fetch</strong> atualiza referências remotas sem integrar automaticamente na
+          branch atual. <strong>git pull</strong> busca e integra (merge ou rebase, conforme configuração).</div>
+        <aside class="slide-notes">Esclareça que pull pode fazer merge ou rebase conforme a configuração; não é sempre
+          um merge tradicional. Diferencie clone de download ZIP (que não contém o histórico Git).</aside>
+      </article>
+      <!-- Slide 17: Branches -->
+      <article class="slide slide-scroll" id="slide-17" data-slide="17" data-section="BRANCHES" data-timing="2 min"
+        data-title="Branches">
+        <div class="deck-heading"><span class="eyebrow">BRANCHING</span>
+          <h1 class="title">Branches: evoluir <span class="grad">sem interromper</span></h1>
+          <p class="subtitle">Uma branch é uma referência móvel para uma sequência de commits.</p>
+        </div>
+        <div class="git-graph"><svg viewBox="0 0 920 250" role="img"
+            aria-label="Diagrama de commits em main e feature login">
+            <path d="M75 155H810" stroke="#4b6da1" stroke-width="5" stroke-linecap="round" />
+            <path d="M295 155C350 155 340 75 415 75H695" fill="none" stroke="#43e1d0" stroke-width="5"
+              stroke-linecap="round" />
+            <path d="M695 75C765 75 730 155 810 155" fill="none" stroke="#43e1d0" stroke-width="5"
+              stroke-dasharray="9 9" />
+            <circle cx="75" cy="155" r="13" fill="#182841" stroke="#6799ff" stroke-width="5" />
+            <circle cx="195" cy="155" r="13" fill="#182841" stroke="#6799ff" stroke-width="5" />
+            <circle cx="295" cy="155" r="13" fill="#182841" stroke="#6799ff" stroke-width="5" />
+            <circle cx="810" cy="155" r="13" fill="#182841" stroke="#6799ff" stroke-width="5" />
+            <circle cx="415" cy="75" r="13" fill="#16352e" stroke="#43e1d0" stroke-width="5" />
+            <circle cx="550" cy="75" r="13" fill="#16352e" stroke="#43e1d0" stroke-width="5" />
+            <circle cx="695" cy="75" r="13" fill="#16352e" stroke="#43e1d0" stroke-width="5" />
+            <rect x="736" y="170" width="114" height="31" rx="8" fill="#25385a" /><text class="svg-label" x="755"
+              y="190">main</text>
+            <rect x="550" y="22" width="192" height="32" rx="8" fill="#18453e" /><text class="svg-label" x="565"
+              y="43">feature/login</text><text class="svg-label-small" x="67" y="200">c1</text><text
+              class="svg-label-small" x="187" y="200">c2</text><text class="svg-label-small" x="407"
+              y="115">c3</text><text class="svg-label-small" x="542" y="115">c4</text>
+          </svg>
+          <div class="branch-note">Cada círculo representa um commit. Branches são referências móveis para commits.
+          </div>
+        </div>
+        <div class="callout">Trabalhar em <strong>feature/login</strong> não altera <strong>main</strong> até que as
+          mudanças sejam integradas.</div>
+        <aside class="slide-notes">Tecnicamente branch é uma referência móvel para commit; a estrutura do histórico
+          permite múltiplas linhas de desenvolvimento. O diagrama mostra uma integração conceitual.</aside>
+      </article>
+      <!-- Slide 18: Criar uma branch -->
+      <article class="slide slide-scroll" id="slide-18" data-slide="18" data-section="BRANCHES" data-timing="2 min"
+        data-title="Criar uma branch">
+        <div class="deck-heading"><span class="eyebrow">BRANCHING</span>
+          <h1 class="title">Uma funcionalidade, <span class="grad">uma branch</span></h1>
+          <p class="subtitle">Isole a mudança, desenvolva, faça commit e publique a branch.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20switch%20-c%20feature%2Fpagina-login%0A%0A%23%20Edite%20os%20arquivos%20do%20projeto%0Agit%20status%0Agit%20add%20.%0Agit%20commit%20-m%20%22feat%3A%20cria%20tela%20de%20login%22%0A%0Agit%20push%20-u%20origin%20feature%2Fpagina-login"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> switch -c feature/pagina-login
+                                                  <span class="comment"># Edite os arquivos do projeto</span>
+                                                  <span class="cmd">git</span> status
+                                                  <span class="cmd">git</span> add .
+                                                  <span class="cmd">git</span> commit -m &quot;feat: cria tela de login&quot;
+                                                  <span class="cmd">git</span> push -u origin feature/pagina-login</pre>
+        </div>
+        <div class="chip-row"><span class="chip">git switch -c → cria + muda</span><span class="chip">git switch main →
+            retorna</span><span class="chip">git branch → lista</span></div>
+        <aside class="slide-notes">Em uma demonstração real, é melhor usar git add com caminhos explícitos se houver
+          arquivos não intencionais no diretório. git switch é o comando moderno; checkout também pode ser encontrado em
+          tutoriais antigos.</aside>
+      </article>
+      <!-- Slide 19: Merge -->
+      <article class="slide slide-scroll" id="slide-19" data-slide="19" data-section="BRANCHES" data-timing="1 min"
+        data-title="Merge">
+        <div class="deck-heading"><span class="eyebrow">INTEGRAÇÃO</span>
+          <h1 class="title">Merge: reunir <span class="grad">trabalhos</span></h1>
+          <p class="subtitle">O Git integra históricos de desenvolvimento de duas branches.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20switch%20main%0Agit%20pull%20origin%20main%0Agit%20merge%20feature%2Fpagina-login%0A%0Agit%20log%20--oneline%20--graph%0Agit%20push%20origin%20main"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> switch main
+                                                      <span class="cmd">git</span> pull origin main
+                                                      <span class="cmd">git</span> merge feature/pagina-login
+                                                      <span class="cmd">git</span> log --oneline --graph
+                                                      <span class="cmd">git</span> push origin main</pre>
+        </div>
+        <div class="callout">Em equipes, normalmente a integração acontece após um <strong>pull request
+            revisado</strong>, e não por merge direto da máquina de cada desenvolvedor.</div>
+        <aside class="slide-notes">Distinga fast-forward de merge commit, se houver tempo. Política de branches
+          protegidas pode impedir push direto na main.</aside>
+      </article>
+      <!-- Slide 20: Conflitos -->
+      <article class="slide slide-scroll" id="slide-20" data-slide="20" data-section="BRANCHES" data-timing="2 min"
+        data-title="Conflitos">
+        <div class="deck-heading"><span class="eyebrow">MERGE CONFLICT</span>
+          <h1 class="title">Quando o Git <span class="grad">precisa de você</span></h1>
+          <p class="subtitle">Conflitos exigem uma decisão humana sobre qual deve ser o conteúdo final.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / conflito / exemplo</span><button class="copy-btn"
+              data-copy="%3C%3C%3C%3C%3C%3C%3C%20HEAD%0A%3Ch1%3EBem-vindo!%3C%2Fh1%3E%0A%3D%3D%3D%3D%3D%3D%3D%0A%3Ch1%3EOl%C3%A1%2C%20equipe!%3C%2Fh1%3E%0A%3E%3E%3E%3E%3E%3E%3E%20feature%2Fcabecalho%0A%0A%23%20Edite%20o%20arquivo%20removendo%20os%20marcadores%0Agit%20add%20index.html%0Agit%20commit"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+                                                          &lt;h1&gt;Bem-vindo!&lt;/h1&gt;
+                                                          =======
+                                                          &lt;h1&gt;Olá, equipe!&lt;/h1&gt;
+                                                          &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/cabecalho
+                                                          <span class="comment"># Edite o arquivo removendo os marcadores</span>
+                                                          <span class="cmd">git</span> add index.html
+                                                          <span class="cmd">git</span> commit</pre>
+        </div>
+        <div class="callout"><strong>Conflito não significa erro fatal.</strong> Resolva o conteúdo, execute os testes e
+          conclua a integração.</div>
+        <aside class="slide-notes">Esclareça que marcadores <<<<<<<,=======e>>>>>>> são inseridos pelo Git durante
+            certos conflitos. Você decide e edita o arquivo. Em caso de merge ainda em andamento, git commit finaliza,
+            ou git merge --continue.</aside>
+      </article>
+      <!-- Slide 21: GitHub Flow -->
+      <article class="slide slide-scroll" id="slide-21" data-slide="21" data-section="COLABORAÇÃO" data-timing="2 min"
+        data-title="GitHub Flow">
+        <div class="deck-heading"><span class="eyebrow">COLABORAÇÃO</span>
+          <h1 class="title">GitHub Flow: do código <span class="grad">à revisão</span></h1>
+          <p class="subtitle">Um fluxo simples e popular para entregar mudanças em equipe.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><small>01 / CRIAR</small><b>Branch</b><span>Separar mudança</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>02 / CODIFICAR</small><b>Commits</b><span>Implementar e testar</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>03 / PROPOR</small><b>Pull request</b><span>Revisar e discutir</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>04 / INTEGRAR</small><b>Merge</b><span>Unir à main</span></div>
+        </div>
+        <div class="callout">Após o merge: <strong>excluir a branch de trabalho</strong> (quando apropriado) e atualizar
+          a main local.</div>
+        <aside class="slide-notes">GitHub Flow pressupõe uma branch principal protegida e branches curtas para mudanças.
+          Pull request permite discussão, revisão e checagens automáticas.</aside>
+      </article>
+      <!-- Slide 22: Pull x Pull Request -->
+      <article class="slide slide-scroll" id="slide-22" data-slide="22" data-section="COLABORAÇÃO" data-timing="1 min"
+        data-title="Pull x Pull Request">
+        <div class="deck-heading"><span class="eyebrow">CONCEITO-CHAVE</span>
+          <h1 class="title"><span class="grad">git pull</span> ≠ pull request</h1>
+          <p class="subtitle">Nomes parecidos, operações totalmente diferentes.</p>
+        </div>
+        <div class="main-grid comparison">
+          <div class="panel blue">
+            <div class="big-icon">↓</div>
+            <h3>git pull</h3>
+            <p><strong>Comando Git.</strong> Busca alterações remotas e as integra à branch local, usando a estratégia
+              configurada.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">↗</div>
+            <h3>Pull request</h3>
+            <p><strong>Recurso do GitHub.</strong> Propõe mesclar mudanças entre branches, permitindo revisão,
+              comentários e testes.</p>
+          </div>
+          <span class="versus">≠</span>
+        </div>
+        <div class="callout">Pergunta comum em entrevistas e equipes: <strong>“Abrir um PR” não é executar git
+            pull.</strong></div>
+        <aside class="slide-notes">Reforce com exemplos: pull = atualizar sua cópia; PR = pedir discussão e integração
+          da sua mudança.</aside>
+      </article>
+      <!-- Slide 23: Abrindo um PR -->
+      <article class="slide slide-scroll" id="slide-23" data-slide="23" data-section="COLABORAÇÃO" data-timing="2 min"
+        data-title="Abrindo um PR">
+        <div class="deck-heading"><span class="eyebrow">PASSO A PASSO</span>
+          <h1 class="title">Seu primeiro <span class="grad">pull request</span></h1>
+          <p class="subtitle">O PR explica o que mudou, por que mudou e como verificar.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">↑</div>
+            <h3>01 · Publique</h3>
+            <p>Faça <code>git push</code> da branch para o GitHub.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">≠</div>
+            <h3>02 · Compare</h3>
+            <p>No GitHub: <strong>Compare & pull request</strong>. Base: main; compare: sua branch.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">✓</div>
+            <h3>03 · Revise</h3>
+            <p>Escreva título, contexto, testes; peça revisão e incorpore feedback.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Merge:</strong> após as aprovações e verificações necessárias, integre a branch
+          pela interface do GitHub.</div>
+        <aside class="slide-notes">Na interface, base é a branch de destino e compare é a branch que contém as mudanças.
+          Demonstre arquivos alterados e aba de revisão. Se possível, mostre PR de exemplo.</aside>
+      </article>
+      <!-- Slide 24: Code review -->
+      <article class="slide slide-scroll" id="slide-24" data-slide="24" data-section="COLABORAÇÃO" data-timing="1 min"
+        data-title="Code review">
+        <div class="deck-heading"><span class="eyebrow">QUALIDADE</span>
+          <h1 class="title">Code review é <span class="grad">engenharia em equipe</span></h1>
+          <p class="subtitle">Uma boa revisão melhora comportamento, clareza, segurança e manutenção.</p>
+        </div>
+        <div class="main-grid">
+          <div class="panel cyan">
+            <div class="big-icon">↑</div>
+            <h3>Quem abre o PR</h3>
+            <p>Contextualiza a mudança, mostra como testar, mantém escopo claro e responde ao feedback.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">◎</div>
+            <h3>Quem revisa</h3>
+            <p>Confere lógica, legibilidade, efeitos colaterais, testes e riscos; sugere melhorias específicas.</p>
+          </div>
+        </div>
+        <div class="chip-row"><span class="chip">Issues → tarefas e bugs</span><span class="chip">Reviews →
+            colaboração</span><span class="chip">Checks → integração contínua</span></div>
+        <aside class="slide-notes">Code review não é punição nem apenas estilo; avalia riscos e contribui para
+          conhecimento compartilhado. CI é opcional mas muito comum.</aside>
+      </article>
+      <!-- Slide 25: Desfazer alterações -->
+      <article class="slide slide-scroll" id="slide-25" data-slide="25" data-section="SEGURANÇA" data-timing="2 min"
+        data-title="Desfazer alterações">
+        <div class="deck-heading"><span class="eyebrow">CUIDADO</span>
+          <h1 class="title">Desfazer <span class="grad">sem apagar a história</span></h1>
+          <p class="subtitle">Escolha o comando conforme o estado da alteração.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20restore%20arquivo.txt%20%20%20%20%20%20%20%20%20%20%23%20descarta%20edi%C3%A7%C3%A3o%20local%0Agit%20restore%20--staged%20arquivo.txt%20%20%23%20retira%20do%20stage%0A%0Agit%20revert%20HASH%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20novo%20commit%20de%20revers%C3%A3o%0A%0A%23%20CUIDADO%3A%20git%20reset%20--hard%20pode%20eliminar%20mudan%C3%A7as%20locais"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> restore arquivo.txt          # descarta edição local
+                                                                <span class="cmd">git</span> restore --staged arquivo.txt  # retira do stage
+                                                                <span class="cmd">git</span> revert HASH                  # novo commit de reversão
+                                                                <span class="comment"># CUIDADO: git reset --hard pode eliminar mudanças locais</span></pre>
+        </div>
+        <div class="callout"><strong>Regra de ouro:</strong> em um histórico compartilhado, prefira
+          <code>git revert</code> para desfazer um commit publicado sem reescrever o histórico.
+        </div>
+        <aside class="slide-notes">restore é destrutivo para alterações locais não salvas em commit. revert cria novo
+          commit inverso. Não recomendar reset --hard sem explicar perda de dados. Evitar force push na main.</aside>
+      </article>
+      <!-- Slide 26: Boas práticas de projeto -->
+      <article class="slide slide-scroll" id="slide-26" data-slide="26" data-section="SEGURANÇA" data-timing="1 min"
+        data-title="Boas práticas de projeto">
+        <div class="deck-heading"><span class="eyebrow">BOAS PRÁTICAS</span>
+          <h1 class="title">Repositório <span class="grad">saudável e seguro</span></h1>
+          <p class="subtitle">Estrutura, documentação e cuidado com informações sensíveis.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">▤</div>
+            <h3>README.md</h3>
+            <p>Objetivo, instalação, execução, testes e contribuição.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">⊘</div>
+            <h3>.gitignore</h3>
+            <p>Ignora arquivos gerados, dependências locais e configurações não versionáveis.</p>
+          </div>
+          <div class="panel red">
+            <div class="big-icon">⚠</div>
+            <h3>Segredos</h3>
+            <p>Nunca commitar senhas, tokens ou chaves; use secrets e variáveis de ambiente.</p>
+          </div>
+        </div>
+        <div class="callout">Se um segredo foi commitado, <strong>removê-lo do arquivo não basta</strong>: revogue ou
+          rotacione a credencial exposta.</div>
+        <aside class="slide-notes">Importante: gitignore impede novos arquivos não rastreados de serem adicionados por
+          padrão; não remove arquivos já rastreados. Ao vazar segredo, revogue primeiro, depois avalie limpeza do
+          histórico.</aside>
+      </article>
+      <!-- Slide 27: Atividade guiada -->
+      <article class="slide slide-scroll" id="slide-27" data-slide="27" data-section="LABORATÓRIO" data-timing="7 min"
+        data-title="Atividade guiada">
+        <div class="deck-heading"><span class="eyebrow">PRÁTICA / 7 MINUTOS</span>
+          <h1 class="title">Do zero ao <span class="grad">primeiro push</span></h1>
+          <p class="subtitle">Desafio: publique README e uma evolução em uma branch, chegando ao PR.</p>
+        </div>
+        <div class="lab-columns">
+          <div class="lab-steps">
+            <div class="lab-row"><span class="clock">1 MIN</span>
+              <p>Crie a pasta e inicialize o repositório Git.</p>
+            </div>
+            <div class="lab-row"><span class="clock">2 MIN</span>
+              <p>Crie README, faça add/commit e consulte o log.</p>
+            </div>
+            <div class="lab-row"><span class="clock">2 MIN</span>
+              <p>Crie o remoto vazio no GitHub; conecte e faça push da main.</p>
+            </div>
+            <div class="lab-row"><span class="clock">2 MIN</span>
+              <p>Crie uma branch, altere o README, faça push e abra um PR.</p>
+            </div>
+          </div>
+          <div class="panel cyan"><span class="mini-tag">CRITÉRIO DE CONCLUSÃO</span>
+            <h3>O que precisa aparecer?</h3>
+            <ul>
+              <li>Um histórico local com commits.</li>
+              <li>Uma branch <code>feature/…</code> remota.</li>
+              <li>Um pull request aberto para a <code>main</code>.</li>
+            </ul>
+            <div class="lab-badge-wrap"><span class="tag">VOCÊ CONSEGUE 🚀</span></div>
+          </div>
+        </div>
+        <aside class="slide-notes">Se a turma não estiver com computadores, realize a demonstração guiada enquanto os
+          participantes preveem o próximo comando. Faça a conta GitHub antes, para não gastar tempo com cadastro.
+        </aside>
+      </article>
+      <!-- Slide 28: Laboratório parte A -->
+      <article class="slide slide-scroll" id="slide-28" data-slide="28" data-section="LABORATÓRIO" data-timing="PRÁTICA"
+        data-title="Laboratório parte A">
+        <div class="deck-heading"><span class="eyebrow">COMANDOS / PARTE A</span>
+          <h1 class="title">Repositório + <span class="grad">primeiro push</span></h1>
+          <p class="subtitle">Copie os comandos e substitua USUARIO pelo seu perfil do GitHub.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="mkdir%20oficina-git%20%26%26%20cd%20oficina-git%0Agit%20init%20-b%20main%0Aecho%20%22%23%20Oficina%20Git%22%20%3E%20README.md%0Agit%20add%20README.md%0Agit%20commit%20-m%20%22docs%3A%20cria%20README%22%0A%0A%23%20Depois%20de%20criar%20um%20reposit%C3%B3rio%20VAZIO%20no%20GitHub%3A%0Agit%20remote%20add%20origin%20https%3A%2F%2Fgithub.com%2FUSUARIO%2Foficina-git.git%0Agit%20push%20-u%20origin%20main"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">mkdir</span> oficina-git &amp;&amp; cd oficina-git
+                                                                    <span class="cmd">git</span> init -b main
+                                                                    <span class="cmd">echo</span> &quot;# Oficina Git&quot; &gt; README.md
+                                                                    <span class="cmd">git</span> add README.md
+                                                                    <span class="cmd">git</span> commit -m &quot;docs: cria README&quot;
+                                                                    <span class="comment"># Depois de criar um repositório VAZIO no GitHub:</span>
+                                                                    <span class="cmd">git</span> remote add origin https://github.com/USUARIO/oficina-git.git
+                                                                    <span class="cmd">git</span> push -u origin main</pre>
+        </div>
+        <div class="callout">Você terminou a parte A quando o arquivo <strong>README.md</strong> estiver visível no
+          repositório remoto.</div>
+        <aside class="slide-notes">Mostre a interface do GitHub enquanto conecta o remoto. Autenticação não será feita
+          por senha comum da conta no terminal. Prefira gerenciador de credenciais ou SSH previamente configurado.
+        </aside>
+      </article>
+      <!-- Slide 29: Laboratório parte B -->
+      <article class="slide slide-scroll" id="slide-29" data-slide="29" data-section="LABORATÓRIO" data-timing="PRÁTICA"
+        data-title="Laboratório parte B">
+        <div class="deck-heading"><span class="eyebrow">COMANDOS / PARTE B</span>
+          <h1 class="title">Branch + commit + <span class="grad">PR</span></h1>
+          <p class="subtitle">Agora faça uma alteração isolada para propor à branch principal.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div>
+            <span class="term-caption">TERMINAL / bash</span><button class="copy-btn"
+              data-copy="git%20switch%20-c%20feature%2Fdescricao%0Aecho%20%22Projeto%20de%20demonstra%C3%A7%C3%A3o%20do%20Git.%22%20%3E%3E%20README.md%0Agit%20add%20README.md%0Agit%20commit%20-m%20%22docs%3A%20descreve%20projeto%22%0Agit%20push%20-u%20origin%20feature%2Fdescricao%0A%0A%23%20No%20GitHub%3A%20Compare%20%26%20pull%20request%0A%23%20Base%3A%20main%20%2F%20compare%3A%20feature%2Fdescricao"
+              title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre><span class="cmd">git</span> switch -c feature/descricao
+                                                                        <span class="cmd">echo</span> &quot;Projeto de demonstração do Git.&quot; &gt;&gt; README.md
+                                                                        <span class="cmd">git</span> add README.md
+                                                                        <span class="cmd">git</span> commit -m &quot;docs: descreve projeto&quot;
+                                                                        <span class="cmd">git</span> push -u origin feature/descricao
+                                                                        <span class="comment"># No GitHub: Compare &amp; pull request</span>
+                                                                        <span class="comment"># Base: main / compare: feature/descricao</span></pre>
+        </div>
+        <div class="callout">Pergunte: <strong>“O que aconteceu com a main antes de clicar em merge?”</strong> Ela
+          permaneceu inalterada.</div>
+        <aside class="slide-notes">Lembre a distinção entre enviar a branch e mesclá-la. Se houver tempo, peça a alguém
+          para revisar o PR e demonstrar a aba Files changed.</aside>
+      </article>
+      <!-- Slide 30: Checklist da equipe -->
+      <article class="slide slide-scroll" id="slide-30" data-slide="30" data-section="FECHAMENTO" data-timing="2 min"
+        data-title="Checklist da equipe">
+        <div class="deck-heading"><span class="eyebrow">FECHAMENTO</span>
+          <h1 class="title">Checklist para um <span class="grad">time produtivo</span></h1>
+          <p class="subtitle">Uma rotina simples reduz conflitos e aumenta previsibilidade.</p>
+        </div>
+        <div class="four-grid">
+          <div class="panel cyan">
+            <div class="big-icon">01</div>
+            <h3>Antes</h3>
+            <p>Sincronize a branch de trabalho e entenda o objetivo da tarefa.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">02</div>
+            <h3>Durante</h3>
+            <p>Mudanças pequenas, git status, diff e commits descritivos.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">03</div>
+            <h3>Ao enviar</h3>
+            <p>Push da branch, PR explicativo, testes e solicitação de review.</p>
+          </div>
+          <div class="panel orange">
+            <div class="big-icon">04</div>
+            <h3>Depois</h3>
+            <p>Integre a alteração, atualize a main e limpe branches obsoletas.</p>
+          </div>
+        </div>
+        <aside class="slide-notes">Reforce: Git organiza o histórico, mas a qualidade da colaboração depende das rotinas
+          e acordos do time.</aside>
+      </article>
+      <!-- Slide 31: Teste rápido -->
+      <article class="slide slide-scroll" id="slide-31" data-slide="31" data-section="FIXAÇÃO" data-timing="2 min"
+        data-title="Teste rápido">
+        <div class="deck-heading"><span class="eyebrow">PERGUNTAS / REVISÃO</span>
+          <h1 class="title">O que você <span class="grad">faria?</span></h1>
+          <p class="subtitle">Clique em “Revelar resposta” depois de ouvir a plateia.</p>
+        </div>
+        <div class="quiz-grid">
+          <div class="quiz-card"><span class="step-count">QUESTÃO 01</span>
+            <h3>Você editou um arquivo e quer incluí-lo no próximo commit.</h3>
+            <button class="reveal-btn">REVELAR RESPOSTA</button>
+            <div class="answer">git add arquivo</div>
+          </div>
+          <div class="quiz-card"><span class="step-count">QUESTÃO 02</span>
+            <h3>Sua funcionalidade precisa ser revisada antes de entrar na main.</h3>
+            <button class="reveal-btn">REVELAR RESPOSTA</button>
+            <div class="answer">Pull request (PR)</div>
+          </div>
+          <div class="quiz-card"><span class="step-count">QUESTÃO 03</span>
+            <h3>Um commit errado já foi publicado na branch compartilhada.</h3>
+            <button class="reveal-btn">REVELAR RESPOSTA</button>
+            <div class="answer">git revert HASH</div>
+          </div>
+        </div>
+        <aside class="slide-notes">Não revele respostas imediatamente. Dê 15 segundos por pergunta, peça justificativa.
+          Refine a terceira: revert é geralmente mais seguro quando o commit já foi compartilhado.</aside>
+      </article>
+      <!-- Slide 32: Recapitulando -->
+      <article class="slide slide-scroll" id="slide-32" data-slide="32" data-section="ENCERRAMENTO" data-timing="1 min"
+        data-title="Recapitulando">
+        <div class="deck-heading"><span class="eyebrow">ENCERRAMENTO</span>
+          <h1 class="title">Seu próximo commit <span class="grad">começa agora</span></h1>
+          <p class="subtitle">Do código local à colaboração com revisão, o processo é progressivo e rastreável.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><small>01 / WORKING TREE</small><b>Editar</b><span>Alterar</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>02 / STAGE</small><b>Add</b><span>Selecionar</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>03 / LOCAL</small><b>Commit</b><span>Registrar</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>04 / GITHUB</small><b>Push + PR</b><span>Colaborar</span></div>
+        </div>
+        <div class="panel panel-resources"><span class="mini-tag">DOCUMENTAÇÃO OFICIAL / PARA CONTINUAR</span>
+          <div class="ref-list"><a class="resource" href="https://git-scm.com/book/pt-br/v2" target="_blank"
+              rel="noopener">Pro Git — git-scm.com/book/pt-br/v2 ↗</a><a class="resource"
+              href="https://git-scm.com/docs" target="_blank" rel="noopener">Referência dos comandos Git —
+              git-scm.com/docs ↗</a><a class="resource" href="https://docs.github.com/pt/get-started" target="_blank"
+              rel="noopener">GitHub Docs — introdução ao GitHub ↗</a><a class="resource"
+              href="https://docs.github.com/pt/get-started/using-github/github-flow" target="_blank"
+              rel="noopener">GitHub Flow — guia oficial ↗</a></div>
+        </div>
+        <aside class="slide-notes">Encerramento: repita a linha mental working tree → staging → commit → remoto → PR.
+          Convide a turma a aplicar o fluxo em um projeto pessoal ou trabalho em equipe.</aside>
+      </article>
+    </main>
+    <!-- Painel Lateral: Notas do Apresentador -->
+    <aside id="notesPanel" class="notes-panel" aria-label="Notas do apresentador">
+      <div class="notes-head">
+        <strong>NOTAS DO PALESTRANTE</strong>
+        <button id="closeNotes" class="icon-btn" aria-label="Fechar notas">✕</button>
+      </div>
+      <div id="notesContent"></div>
+    </aside>
+    <!-- Modal: Visão Geral / Mapa da Apresentação -->
+    <section id="overview" class="overview" aria-label="Índice dos slides">
+      <div class="overview-head">
+        <div>
+          <span class="eyebrow">NAVEGAÇÃO</span>
+          <h2>Mapa da apresentação</h2>
+        </div>
+        <button id="closeOverview" class="icon-btn" aria-label="Fechar índice">✕</button>
+      </div>
+      <div id="overviewGrid" class="overview-grid"></div>
+    </section>
+    <!-- Rodapé: Navegação, Contagem e Progresso -->
+    <footer class="footer">
+      <div class="footer-left">
+        <span id="sectionLabel">ABERTURA</span>
+        <span class="footer-line"></span>
+        <span class="timing" id="timing">0:00</span>
+      </div>
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div class="footer-right">
+        <span id="slideCounter" class="counter">01 <em>/ 32</em></span>
+        <button id="prevBtn" class="nav-btn" title="Anterior (←)" aria-label="Slide anterior" disabled>←</button>
+        <button id="nextBtn" class="nav-btn nav-next" title="Próximo (→)" aria-label="Próximo slide">→</button>
+      </div>
+    </footer>
+    <!-- Toast: Feedback de Ações -->
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#080d1a" />
   <meta name="description"
-    content="Apresentação interativa: Do Commit ao Código — Git e GitHub na prática, 50 minutos." />
+    content="Apresentação interativa: Do Commit ao Código — Git e GitHub na prática, 50 minutos com bloco complementar de mercado." />
   <title>Do Commit ao Código | Git + GitHub na prática</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -34,7 +34,7 @@
     <!-- Palco Principal (Slides) -->
     <main id="stage" class="stage" tabindex="-1" aria-live="polite">
       <!-- Slide 1: Do Commit ao Código -->
-      <article class="slide slide-scroll slide-cover active" id="slide-1" data-slide="1" data-section="ABERTURA"
+      <article id="slide-1" data-slide="1" class="slide slide-scroll slide-cover active" data-section="ABERTURA"
         data-timing="0:00" data-title="Do Commit ao Código">
         <div class="cover-shape"><svg viewBox="0 0 300 300" aria-hidden="true">
             <defs>
@@ -63,7 +63,7 @@
       </article>
 
       <!-- Slide 2: Sobre o Palestrante -->
-      <article class="slide slide-scroll" id="slide-2" data-slide="2" data-section="SOBRE MIM" data-timing="1 min"
+      <article id="slide-2" data-slide="2" class="slide slide-scroll" data-section="SOBRE MIM" data-timing="1 min"
         data-title="Sobre o Palestrante">
         <div class="deck-heading"><span class="eyebrow">APRESENTAÇÃO</span>
           <h1 class="title">Guilherme <span class="grad">Berson</span></h1>
@@ -95,7 +95,7 @@
       </article>
 
       <!-- Slide 3: O que você será capaz de fazer -->
-      <article class="slide slide-scroll" id="slide-3" data-slide="3" data-section="INTRODUÇÃO" data-timing="1 min"
+      <article id="slide-3" data-slide="3" class="slide slide-scroll" data-section="INTRODUÇÃO" data-timing="1 min"
         data-title="O que você será capaz de fazer">
         <div class="deck-heading"><span class="eyebrow">ROTEIRO / OBJETIVOS</span>
           <h1 class="title">O que você será capaz <span class="grad">de fazer</span></h1>
@@ -124,7 +124,7 @@
           Para a parte prática, Git e uma conta GitHub ajudam.</aside>
       </article>
       <!-- Slide 4: O problema das versões -->
-      <article class="slide slide-scroll" id="slide-4" data-slide="4" data-section="FUNDAMENTOS" data-timing="2 min"
+      <article id="slide-4" data-slide="4" class="slide slide-scroll" data-section="FUNDAMENTOS" data-timing="2 min"
         data-title="O problema das versões">
         <div class="deck-heading"><span class="eyebrow">CONTEXTO</span>
           <h1 class="title">O caos do <span class="grad">projeto_final_v3.zip</span></h1>
@@ -153,7 +153,7 @@
           de versão resolve rastreabilidade e coordenação, não necessariamente evita todo conflito.</aside>
       </article>
       <!-- Slide 5: Controle de versão -->
-      <article class="slide slide-scroll" id="slide-5" data-slide="5" data-section="FUNDAMENTOS" data-timing="2 min"
+      <article id="slide-5" data-slide="5" class="slide slide-scroll" data-section="FUNDAMENTOS" data-timing="2 min"
         data-title="Controle de versão">
         <div class="deck-heading"><span class="eyebrow">CONCEITO</span>
           <h1 class="title">Controle de versão: <span class="grad">a ideia central</span></h1>
@@ -174,7 +174,7 @@
           objetos de forma eficiente. O valor é ter uma narrativa técnica auditável.</aside>
       </article>
       <!-- Slide 6: Git ≠ GitHub -->
-      <article class="slide slide-scroll" id="slide-6" data-slide="6" data-section="FUNDAMENTOS" data-timing="2 min"
+      <article id="slide-6" data-slide="6" class="slide slide-scroll" data-section="FUNDAMENTOS" data-timing="2 min"
         data-title="Git ≠ GitHub">
         <div class="deck-heading"><span class="eyebrow">DIFERENÇA ESSENCIAL</span>
           <h1 class="title"><span class="grad">Git</span> ≠ GitHub</h1>
@@ -201,7 +201,7 @@
           uma interface social/colaborativa. GitLab e Bitbucket são alternativas.</aside>
       </article>
       <!-- Slide 7: Modelo distribuído -->
-      <article class="slide slide-scroll" id="slide-7" data-slide="7" data-section="FUNDAMENTOS" data-timing="1 min"
+      <article id="slide-7" data-slide="7" class="slide slide-scroll" data-section="FUNDAMENTOS" data-timing="1 min"
         data-title="Modelo distribuído">
         <div class="deck-heading"><span class="eyebrow">ARQUITETURA</span>
           <h1 class="title">Um modelo <span class="grad">distribuído</span></h1>
@@ -220,7 +220,7 @@
           “origin” é um apelido convencional do remoto.</aside>
       </article>
       <!-- Slide 8: Configuração do Git -->
-      <article class="slide slide-scroll" id="slide-8" data-slide="8" data-section="PRIMEIROS PASSOS"
+      <article id="slide-8" data-slide="8" class="slide slide-scroll" data-section="PRIMEIROS PASSOS"
         data-timing="2 min" data-title="Configuração do Git">
         <div class="deck-heading"><span class="eyebrow">COMEÇANDO</span>
           <h1 class="title">Primeiro, configure <span class="grad">sua identidade</span></h1>
@@ -244,7 +244,7 @@
           autenticação HTTPS pode usar credential manager/token, ou SSH com chave configurada.</aside>
       </article>
       <!-- Slide 9: Criar repositório -->
-      <article class="slide slide-scroll" id="slide-9" data-slide="9" data-section="PRIMEIROS PASSOS"
+      <article id="slide-9" data-slide="9" class="slide slide-scroll" data-section="PRIMEIROS PASSOS"
         data-timing="2 min" data-title="Criar repositório">
         <div class="deck-heading"><span class="eyebrow">REPOSITÓRIO</span>
           <h1 class="title">Da pasta ao <span class="grad">repositório Git</span></h1>
@@ -269,7 +269,7 @@
           .git. “git init -b main” depende de versão compatível do Git.</aside>
       </article>
       <!-- Slide 10: Ciclo de uma alteração -->
-      <article class="slide slide-scroll" id="slide-10" data-slide="10" data-section="VERSIONAMENTO" data-timing="2 min"
+      <article id="slide-10" data-slide="10" class="slide slide-scroll" data-section="VERSIONAMENTO" data-timing="2 min"
         data-title="Ciclo de uma alteração">
         <div class="deck-heading"><span class="eyebrow">MODELO MENTAL</span>
           <h1 class="title">Da edição ao <span class="grad">push</span></h1>
@@ -290,7 +290,7 @@
           Aproveite o simulador no slide seguinte para reforçar.</aside>
       </article>
       <!-- Slide 11: Simulador Git -->
-      <article class="slide slide-scroll" id="slide-11" data-slide="11" data-section="VERSIONAMENTO" data-timing="2 min"
+      <article id="slide-11" data-slide="11" class="slide slide-scroll" data-section="VERSIONAMENTO" data-timing="2 min"
         data-title="Simulador Git">
         <div class="deck-heading"><span class="eyebrow">DEMONSTRAÇÃO INTERATIVA</span>
           <h1 class="title">O ciclo Git <span class="grad">em movimento</span></h1>
@@ -327,7 +327,7 @@
           Use este slide para aferir se a plateia compreendeu o fluxo.</aside>
       </article>
       <!-- Slide 12: Primeiro commit -->
-      <article class="slide slide-scroll" id="slide-12" data-slide="12" data-section="VERSIONAMENTO" data-timing="2 min"
+      <article id="slide-12" data-slide="12" class="slide slide-scroll" data-section="VERSIONAMENTO" data-timing="2 min"
         data-title="Primeiro commit">
         <div class="deck-heading"><span class="eyebrow">DEMONSTRAÇÃO</span>
           <h1 class="title">Seu <span class="grad">primeiro commit</span></h1>
@@ -352,7 +352,7 @@
           publica no GitHub. O hash é um identificador do objeto commit.</aside>
       </article>
       <!-- Slide 13: Histórico e diferenças -->
-      <article class="slide slide-scroll" id="slide-13" data-slide="13" data-section="VERSIONAMENTO" data-timing="1 min"
+      <article id="slide-13" data-slide="13" class="slide slide-scroll" data-section="VERSIONAMENTO" data-timing="1 min"
         data-title="Histórico e diferenças">
         <div class="deck-heading"><span class="eyebrow">CONTROLE</span>
           <h1 class="title">Enxergue o <span class="grad">histórico</span></h1>
@@ -377,7 +377,7 @@
           commit atualmente apontado por HEAD.</aside>
       </article>
       <!-- Slide 14: Boas mensagens -->
-      <article class="slide slide-scroll" id="slide-14" data-slide="14" data-section="VERSIONAMENTO" data-timing="1 min"
+      <article id="slide-14" data-slide="14" class="slide slide-scroll" data-section="VERSIONAMENTO" data-timing="1 min"
         data-title="Boas mensagens">
         <div class="deck-heading"><span class="eyebrow">BOAS PRÁTICAS</span>
           <h1 class="title">Um bom commit <span class="grad">conta uma história</span></h1>
@@ -403,7 +403,7 @@
           mensagens. Prefira mensagem imperativa, escopo e intenção claros.</aside>
       </article>
       <!-- Slide 15: Publicar no GitHub -->
-      <article class="slide slide-scroll" id="slide-15" data-slide="15" data-section="GITHUB" data-timing="2 min"
+      <article id="slide-15" data-slide="15" class="slide slide-scroll" data-section="GITHUB" data-timing="2 min"
         data-title="Publicar no GitHub">
         <div class="deck-heading"><span class="eyebrow">REMOTO</span>
           <h1 class="title">Seu código no <span class="grad">GitHub</span></h1>
@@ -427,7 +427,7 @@
           push, não marque a opção de criar README no remoto se você já o criou localmente.</aside>
       </article>
       <!-- Slide 16: Clonar e sincronizar -->
-      <article class="slide slide-scroll" id="slide-16" data-slide="16" data-section="GITHUB" data-timing="1 min"
+      <article id="slide-16" data-slide="16" class="slide slide-scroll" data-section="GITHUB" data-timing="1 min"
         data-title="Clonar e sincronizar">
         <div class="deck-heading"><span class="eyebrow">SINCRONIZAÇÃO</span>
           <h1 class="title">Clone, fetch, pull <span class="grad">e push</span></h1>
@@ -451,7 +451,7 @@
           um merge tradicional. Diferencie clone de download ZIP (que não contém o histórico Git).</aside>
       </article>
       <!-- Slide 17: Branches -->
-      <article class="slide slide-scroll" id="slide-17" data-slide="17" data-section="BRANCHES" data-timing="2 min"
+      <article id="slide-17" data-slide="17" class="slide slide-scroll" data-section="BRANCHES" data-timing="2 min"
         data-title="Branches">
         <div class="deck-heading"><span class="eyebrow">BRANCHING</span>
           <h1 class="title">Branches: evoluir <span class="grad">sem interromper</span></h1>
@@ -487,7 +487,7 @@
           permite múltiplas linhas de desenvolvimento. O diagrama mostra uma integração conceitual.</aside>
       </article>
       <!-- Slide 18: Criar uma branch -->
-      <article class="slide slide-scroll" id="slide-18" data-slide="18" data-section="BRANCHES" data-timing="2 min"
+      <article id="slide-18" data-slide="18" class="slide slide-scroll" data-section="BRANCHES" data-timing="2 min"
         data-title="Criar uma branch">
         <div class="deck-heading"><span class="eyebrow">BRANCHING</span>
           <h1 class="title">Uma funcionalidade, <span class="grad">uma branch</span></h1>
@@ -514,7 +514,7 @@
           tutoriais antigos.</aside>
       </article>
       <!-- Slide 19: Merge -->
-      <article class="slide slide-scroll" id="slide-19" data-slide="19" data-section="BRANCHES" data-timing="1 min"
+      <article id="slide-19" data-slide="19" class="slide slide-scroll" data-section="BRANCHES" data-timing="1 min"
         data-title="Merge">
         <div class="deck-heading"><span class="eyebrow">INTEGRAÇÃO</span>
           <h1 class="title">Merge: reunir <span class="grad">trabalhos</span></h1>
@@ -539,7 +539,7 @@
           protegidas pode impedir push direto na main.</aside>
       </article>
       <!-- Slide 20: Conflitos -->
-      <article class="slide slide-scroll" id="slide-20" data-slide="20" data-section="BRANCHES" data-timing="2 min"
+      <article id="slide-20" data-slide="20" class="slide slide-scroll" data-section="BRANCHES" data-timing="2 min"
         data-title="Conflitos">
         <div class="deck-heading"><span class="eyebrow">MERGE CONFLICT</span>
           <h1 class="title">Quando o Git <span class="grad">precisa de você</span></h1>
@@ -568,7 +568,7 @@
             ou git merge --continue.</aside>
       </article>
       <!-- Slide 21: GitHub Flow -->
-      <article class="slide slide-scroll" id="slide-21" data-slide="21" data-section="COLABORAÇÃO" data-timing="2 min"
+      <article id="slide-21" data-slide="21" class="slide slide-scroll" data-section="COLABORAÇÃO" data-timing="2 min"
         data-title="GitHub Flow">
         <div class="deck-heading"><span class="eyebrow">COLABORAÇÃO</span>
           <h1 class="title">GitHub Flow: do código <span class="grad">à revisão</span></h1>
@@ -589,7 +589,7 @@
           Pull request permite discussão, revisão e checagens automáticas.</aside>
       </article>
       <!-- Slide 22: Pull x Pull Request -->
-      <article class="slide slide-scroll" id="slide-22" data-slide="22" data-section="COLABORAÇÃO" data-timing="1 min"
+      <article id="slide-22" data-slide="22" class="slide slide-scroll" data-section="COLABORAÇÃO" data-timing="1 min"
         data-title="Pull x Pull Request">
         <div class="deck-heading"><span class="eyebrow">CONCEITO-CHAVE</span>
           <h1 class="title"><span class="grad">git pull</span> ≠ pull request</h1>
@@ -616,7 +616,7 @@
           da sua mudança.</aside>
       </article>
       <!-- Slide 23: Abrindo um PR -->
-      <article class="slide slide-scroll" id="slide-23" data-slide="23" data-section="COLABORAÇÃO" data-timing="2 min"
+      <article id="slide-23" data-slide="23" class="slide slide-scroll" data-section="COLABORAÇÃO" data-timing="2 min"
         data-title="Abrindo um PR">
         <div class="deck-heading"><span class="eyebrow">PASSO A PASSO</span>
           <h1 class="title">Seu primeiro <span class="grad">pull request</span></h1>
@@ -645,7 +645,7 @@
           Demonstre arquivos alterados e aba de revisão. Se possível, mostre PR de exemplo.</aside>
       </article>
       <!-- Slide 24: Code review -->
-      <article class="slide slide-scroll" id="slide-24" data-slide="24" data-section="COLABORAÇÃO" data-timing="1 min"
+      <article id="slide-24" data-slide="24" class="slide slide-scroll" data-section="COLABORAÇÃO" data-timing="1 min"
         data-title="Code review">
         <div class="deck-heading"><span class="eyebrow">QUALIDADE</span>
           <h1 class="title">Code review é <span class="grad">engenharia em equipe</span></h1>
@@ -668,8 +668,75 @@
         <aside class="slide-notes">Code review não é punição nem apenas estilo; avalia riscos e contribui para
           conhecimento compartilhado. CI é opcional mas muito comum.</aside>
       </article>
+      <!-- BLOCO ADICIONAL: PRÁTICAS PROFISSIONAIS -->
+      <article id="slide-25" data-slide="25" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min" data-title="Git como &lt;span class=&quot;grad&quot;&gt;processo de equipe&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Git como <span class="grad">processo de equipe</span></h1><p class="subtitle">Em empresas, versionar não é só guardar código: é coordenar entregas, qualidade e rastreabilidade.</p></div>
+        <div class="three-grid"><div class="panel cyan"><div class="big-icon">⌁</div><h3>Produto / tarefa</h3><p>Uma demanda nasce no backlog: bug, melhoria, história ou incidente. O ticket fornece contexto e critério de aceite.</p></div><div class="panel blue"><div class="big-icon">⑂</div><h3>Desenvolvimento</h3><p>Uma pessoa implementa em sua branch; colegas trabalham em paralelo e integram por pull requests.</p></div><div class="panel violet"><div class="big-icon">✓</div><h3>Qualidade e entrega</h3><p>Testes, revisão, validações e deploy conectam o commit ao software entregue ao usuário.</p></div></div><div class="callout"><strong>Exemplo ilustrativo:</strong> a tarefa APP-142 pede recuperação de senha; o histórico do Git mostra em quais commits e PRs a entrega foi realizada.</div>
+        <aside class="slide-notes">Pergunte quem já trabalhou com Jira, Azure Boards, Trello ou GitHub Issues. Explique que os rituais variam por empresa; Git não impõe processos ágeis.</aside>
+      </article>
+      <article id="slide-26" data-slide="26" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min" data-title="Como nomear &lt;span class=&quot;grad&quot;&gt;suas branches&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Como nomear <span class="grad">suas branches</span></h1><p class="subtitle">Nomes claros ajudam a conectar a mudança com o motivo e a tarefa do time.</p></div>
+        <div class="three-grid"><div class="panel cyan"><div class="big-icon">＋</div><h3>feature/</h3><p><code>feature/APP-142-recuperar-senha</code><br>Nova funcionalidade orientada ao ticket.</p></div><div class="panel blue"><div class="big-icon">⚒</div><h3>fix/ ou bugfix/</h3><p><code>fix/APP-187-login-500</code><br>Correção de defeito identificado.</p></div><div class="panel red"><div class="big-icon">⚡</div><h3>hotfix/</h3><p><code>hotfix/APP-201-pagamento</code><br>Correção prioritária, com fluxo definido pelo time.</p></div></div><div class="chip-row"><span class="chip">docs/atualizar-readme</span><span class="chip">refactor/servico-pedidos</span><span class="chip">chore/atualizar-deps</span></div><div class="callout"><strong>Convenção, não regra do Git:</strong> escolha um padrão e documente-o. Prefira nomes curtos, descritivos e consistentes; evite espaços.</div>
+        <aside class="slide-notes">Diferencie nome técnico de branch de requisito de ferramenta. Algumas equipes usam feat/, outras feature/, e outras só o número do ticket. Nunca apresente uma convenção interna como obrigatória.</aside>
+      </article>
+      <article id="slide-27" data-slide="27" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Branch do ticket: &lt;span class=&quot;grad&quot;&gt;do início ao PR&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Branch do ticket: <span class="grad">do início ao PR</span></h1><p class="subtitle">Exemplo de comandos para começar uma tarefa com a base atualizada.</p></div>
+        <div class="terminal"><div class="term-top"><div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">TERMINAL / bash</span><button class="copy-btn" title="Copiar comandos">COPIAR ↗</button></div><pre>git switch main
+git pull --ff-only origin main
+git switch -c feature/APP-142-recuperar-senha
+# editar arquivos e executar testes
+git add .
+git commit -m &quot;feat(auth): adiciona recuperacao de senha&quot;
+git push -u origin feature/APP-142-recuperar-senha</pre></div><div class="callout"><strong>Em seguida:</strong> abra um PR da branch <code>feature/APP-142-recuperar-senha</code> para <code>main</code>. O <code>git add .</code> exige conferir o que será incluído com <code>git diff --cached</code>.</div>
+        <aside class="slide-notes">Explique que main deve existir localmente e origin precisa estar configurado. Com git pull --ff-only, caso haja divergência, a operação falha em vez de criar merge automático. Incentive commits pequenos e focados.</aside>
+      </article>
+      <article id="slide-28" data-slide="28" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Três devs, &lt;span class=&quot;grad&quot;&gt;um produto&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Três devs, <span class="grad">um produto</span></h1><p class="subtitle">O trabalho é paralelo; a integração é coordenada.</p></div>
+        <div class="team-board">
+  <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA A</span><strong>Login social</strong><code>feature/APP-108-google-login</code><span class="team-status">PR #57 · aguardando review</span></div>
+  <div class="team-lane"><span class="mini-tag">DESENVOLVEDOR B</span><strong>Correção de carrinho</strong><code>fix/APP-119-total-carrinho</code><span class="team-status">PR #58 · checks aprovados</span></div>
+  <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA C</span><strong>Documentação da API</strong><code>docs/APP-123-endpoints</code><span class="team-status">PR #59 · ajustes pedidos</span></div>
+ </div><div class="flow compact-flow"><div class="flow-step"><small>ISOLAMENTO</small><b>Branches</b></div><div class="flow-arrow">→</div><div class="flow-step"><small>VALIDAÇÃO</small><b>PR + CI</b></div><div class="flow-arrow">→</div><div class="flow-step"><small>INTEGRAÇÃO</small><b>main</b></div></div><div class="callout"><strong>Importante:</strong> uma branch por tarefa reduz interferências, mas não elimina conflitos quando arquivos e regras de negócio se sobrepõem.</div>
+        <aside class="slide-notes">Estes são exemplos fictícios de tickets e PRs para explicar situações usuais. Demonstre comunicação: alguém pode avisar quando alterar contratos compartilhados, componentes comuns ou migrations.</aside>
+      </article>
+      <article id="slide-29" data-slide="29" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="O que acontece &lt;span class=&quot;grad&quot;&gt;antes do merge?&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">O que acontece <span class="grad">antes do merge?</span></h1><p class="subtitle">O pull request funciona como ponto de colaboração e controle de qualidade.</p></div>
+        <div class="four-grid"><div class="panel cyan"><div class="big-icon">01</div><h3>Descrição</h3><p>Objetivo, ticket, mudanças, evidências e como testar.</p></div><div class="panel blue"><div class="big-icon">02</div><h3>CI automatizada</h3><p>Build, testes, lint e verificações de segurança configuradas.</p></div><div class="panel violet"><div class="big-icon">03</div><h3>Code review</h3><p>Revisores analisam comportamento, legibilidade e riscos.</p></div><div class="panel cyan"><div class="big-icon">04</div><h3>Aprovação</h3><p>Depois de cumprir as regras do repositório, a alteração pode ser integrada.</p></div></div><div class="callout"><strong>Boas práticas:</strong> proteger <code>main</code>, exigir checks e aprovação quando adequado e evitar push direto em produção. Essas regras dependem da configuração do repositório.</div>
+        <aside class="slide-notes">Cite como recursos do GitHub as regras de proteção de branches, rulesets e CODEOWNERS. Explique que PR não é comando Git, e a equipe escolhe merge commit, squash ou rebase conforme política.</aside>
+      </article>
+      <article id="slide-30" data-slide="30" class="slide slide-scroll" data-section="MERCADO" data-timing="1 min" data-title="Commits que contam &lt;span class=&quot;grad&quot;&gt;uma história&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Commits que contam <span class="grad">uma história</span></h1><p class="subtitle">Mensagens consistentes tornam histórico, revisão e automações mais compreensíveis.</p></div>
+        <div class="main-grid"><div class="panel cyan"><div class="big-icon">✓</div><h3>Mensagens informativas</h3><p><code>feat(auth): adiciona login com Google</code><br><code>fix(cart): corrige total com cupom</code><br><code>docs(api): documenta endpoints</code></p></div><div class="panel red"><div class="big-icon">×</div><h3>Evite mensagens vagas</h3><p><code>ajustes</code><br><code>mudanças finais</code><br><code>corrigido agora vai</code><br>Não dizem o que mudou ou por quê.</p></div></div><div class="callout"><strong>Conventional Commits:</strong> <code>tipo(escopo): descrição</code> é uma convenção opcional. <code>feat</code> e <code>fix</code> podem orientar automações de release; mudanças incompatíveis exigem sinalização específica.</div>
+        <aside class="slide-notes">Não confunda commits com versões publicadas. Mensagens bem escritas são úteis mesmo sem automação de release. Explique o significado de feat, fix, docs e refactor.</aside>
+      </article>
+      <article id="slide-31" data-slide="31" class="slide slide-scroll" data-section="RELEASES" data-timing="2 min" data-title="Versionar código × &lt;span class=&quot;grad&quot;&gt;versionar produto&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Versionar código × <span class="grad">versionar produto</span></h1><p class="subtitle">Commits registram alterações; tags e releases identificam marcos entregáveis.</p></div>
+        <div class="three-grid"><div class="panel cyan"><div class="big-icon">1</div><h3>MAJOR · 2.0.0</h3><p>Mudança incompatível em uma API pública, conforme Semantic Versioning.</p></div><div class="panel blue"><div class="big-icon">2</div><h3>MINOR · 1.5.0</h3><p>Nova funcionalidade compatível com versões anteriores.</p></div><div class="panel violet"><div class="big-icon">3</div><h3>PATCH · 1.4.1</h3><p>Correção compatível de defeito.</p></div></div><div class="terminal"><div class="term-top"><div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">RELEASE / exemplo</span><button class="copy-btn" title="Copiar comandos">COPIAR ↗</button></div><pre>git tag -a v1.4.1 -m &quot;Release 1.4.1&quot;
+git push origin v1.4.1
+git tag --list</pre></div><div class="callout"><strong>Atenção:</strong> SemVer faz sentido quando há um contrato de versão/API definido. A equipe decide sua estratégia de releases e a criação das tags.</div>
+        <aside class="slide-notes">Versão semântica não é a mesma coisa que o número do commit nem o nome da branch. Uma tag é uma referência Git a um ponto do histórico; uma release do GitHub pode acrescentar notas e artefatos.</aside>
+      </article>
+      <article id="slide-32" data-slide="32" class="slide slide-scroll" data-section="RELEASES" data-timing="1 min" data-title="Estratégias de branches &lt;span class=&quot;grad&quot;&gt;no mercado&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Estratégias de branches <span class="grad">no mercado</span></h1><p class="subtitle">Não existe um único fluxo obrigatório: o processo acompanha o produto e a frequência de entrega.</p></div>
+        <div class="three-grid"><div class="panel cyan"><div class="big-icon">⑂</div><h3>GitHub Flow</h3><p>Uma main estável e branches curtas com PRs; adequado a entregas contínuas.</p></div><div class="panel blue"><div class="big-icon">⇄</div><h3>GitFlow</h3><p>Pode usar develop, feature, release e hotfix; mais etapas e branches de longa duração.</p></div><div class="panel violet"><div class="big-icon">∞</div><h3>Trunk-based</h3><p>Integrações frequentes em uma trunk; branches muito curtas e automação de testes.</p></div></div><div class="callout"><strong>Qual usar?</strong> Prefira o fluxo mais simples que cumpra as necessidades de revisão, testes, estabilidade e implantação do seu time.</div>
+        <aside class="slide-notes">Evite afirmar que toda empresa usa GitFlow. Em entregas contínuas, equipes frequentemente preferem branches curtas. Se usar feature flags, explique que mudanças incompletas podem ser integradas sem ficarem visíveis ao usuário.</aside>
+      </article>
+      <article id="slide-33" data-slide="33" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Desafio de equipe: &lt;span class=&quot;grad&quot;&gt;decida o fluxo&lt;/span&gt;">
+        <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
+          <h1 class="title">Desafio de equipe: <span class="grad">decida o fluxo</span></h1><p class="subtitle">Situação: uma funcionalidade está pronta, mas a main recebeu alterações de outros desenvolvedores.</p></div>
+        <div class="panel violet"><span class="mini-tag">CASO PRÁTICO / DISCUSSÃO</span><h3>Você é responsável pela tarefa APP-142</h3><p>Seu PR falhou em um teste e há conflito no arquivo de rotas. O deploy de hoje depende da estabilidade da main. O que você faz?</p></div><div class="three-grid"><div class="panel cyan"><div class="big-icon">01</div><h3>Investigar</h3><p>Consultar o resultado do CI e reproduzir a falha localmente.</p></div><div class="panel blue"><div class="big-icon">02</div><h3>Sincronizar</h3><p>Atualizar a branch com a base, resolver conflitos e executar testes.</p></div><div class="panel violet"><div class="big-icon">03</div><h3>Revalidar</h3><p>Publicar as correções, responder ao review e aguardar os checks exigidos.</p></div></div><div class="callout"><strong>Mensagem central:</strong> não faça merge apenas para “destravar” o pipeline. Integração é responsabilidade compartilhada.</div>
+        <aside class="slide-notes">Use 60 segundos de discussão com a plateia. Uma solução possível é git fetch origin e git merge origin/main enquanto estiver na feature branch; em outras equipes pode-se usar rebase com cuidado, especialmente se a branch é compartilhada. Não forçar push em main.</aside>
+      </article>
       <!-- Slide 25: Desfazer alterações -->
-      <article class="slide slide-scroll" id="slide-25" data-slide="25" data-section="SEGURANÇA" data-timing="2 min"
+      <article id="slide-34" data-slide="34" class="slide slide-scroll" data-section="SEGURANÇA" data-timing="2 min"
         data-title="Desfazer alterações">
         <div class="deck-heading"><span class="eyebrow">CUIDADO</span>
           <h1 class="title">Desfazer <span class="grad">sem apagar a história</span></h1>
@@ -694,7 +761,7 @@
           commit inverso. Não recomendar reset --hard sem explicar perda de dados. Evitar force push na main.</aside>
       </article>
       <!-- Slide 26: Boas práticas de projeto -->
-      <article class="slide slide-scroll" id="slide-26" data-slide="26" data-section="SEGURANÇA" data-timing="1 min"
+      <article id="slide-35" data-slide="35" class="slide slide-scroll" data-section="SEGURANÇA" data-timing="1 min"
         data-title="Boas práticas de projeto">
         <div class="deck-heading"><span class="eyebrow">BOAS PRÁTICAS</span>
           <h1 class="title">Repositório <span class="grad">saudável e seguro</span></h1>
@@ -724,7 +791,7 @@
           histórico.</aside>
       </article>
       <!-- Slide 27: Atividade guiada -->
-      <article class="slide slide-scroll" id="slide-27" data-slide="27" data-section="LABORATÓRIO" data-timing="7 min"
+      <article id="slide-36" data-slide="36" class="slide slide-scroll" data-section="LABORATÓRIO" data-timing="7 min"
         data-title="Atividade guiada">
         <div class="deck-heading"><span class="eyebrow">PRÁTICA / 7 MINUTOS</span>
           <h1 class="title">Do zero ao <span class="grad">primeiro push</span></h1>
@@ -760,7 +827,7 @@
         </aside>
       </article>
       <!-- Slide 28: Laboratório parte A -->
-      <article class="slide slide-scroll" id="slide-28" data-slide="28" data-section="LABORATÓRIO" data-timing="PRÁTICA"
+      <article id="slide-37" data-slide="37" class="slide slide-scroll" data-section="LABORATÓRIO" data-timing="PRÁTICA"
         data-title="Laboratório parte A">
         <div class="deck-heading"><span class="eyebrow">COMANDOS / PARTE A</span>
           <h1 class="title">Repositório + <span class="grad">primeiro push</span></h1>
@@ -789,7 +856,7 @@
         </aside>
       </article>
       <!-- Slide 29: Laboratório parte B -->
-      <article class="slide slide-scroll" id="slide-29" data-slide="29" data-section="LABORATÓRIO" data-timing="PRÁTICA"
+      <article id="slide-38" data-slide="38" class="slide slide-scroll" data-section="LABORATÓRIO" data-timing="PRÁTICA"
         data-title="Laboratório parte B">
         <div class="deck-heading"><span class="eyebrow">COMANDOS / PARTE B</span>
           <h1 class="title">Branch + commit + <span class="grad">PR</span></h1>
@@ -816,7 +883,7 @@
           para revisar o PR e demonstrar a aba Files changed.</aside>
       </article>
       <!-- Slide 30: Checklist da equipe -->
-      <article class="slide slide-scroll" id="slide-30" data-slide="30" data-section="FECHAMENTO" data-timing="2 min"
+      <article id="slide-39" data-slide="39" class="slide slide-scroll" data-section="FECHAMENTO" data-timing="2 min"
         data-title="Checklist da equipe">
         <div class="deck-heading"><span class="eyebrow">FECHAMENTO</span>
           <h1 class="title">Checklist para um <span class="grad">time produtivo</span></h1>
@@ -848,7 +915,7 @@
           e acordos do time.</aside>
       </article>
       <!-- Slide 31: Teste rápido -->
-      <article class="slide slide-scroll" id="slide-31" data-slide="31" data-section="FIXAÇÃO" data-timing="2 min"
+      <article id="slide-40" data-slide="40" class="slide slide-scroll" data-section="FIXAÇÃO" data-timing="2 min"
         data-title="Teste rápido">
         <div class="deck-heading"><span class="eyebrow">PERGUNTAS / REVISÃO</span>
           <h1 class="title">O que você <span class="grad">faria?</span></h1>
@@ -875,7 +942,7 @@
           Refine a terceira: revert é geralmente mais seguro quando o commit já foi compartilhado.</aside>
       </article>
       <!-- Slide 32: Recapitulando -->
-      <article class="slide slide-scroll" id="slide-32" data-slide="32" data-section="ENCERRAMENTO" data-timing="1 min"
+      <article id="slide-41" data-slide="41" class="slide slide-scroll" data-section="ENCERRAMENTO" data-timing="1 min"
         data-title="Recapitulando">
         <div class="deck-heading"><span class="eyebrow">ENCERRAMENTO</span>
           <h1 class="title">Seu próximo commit <span class="grad">começa agora</span></h1>
@@ -933,7 +1000,7 @@
         <div id="progressBar" class="progress-bar"></div>
       </div>
       <div class="footer-right">
-        <span id="slideCounter" class="counter">01 <em>/ 32</em></span>
+        <span id="slideCounter" class="counter">01 <em>/ 41</em></span>
         <button id="prevBtn" class="nav-btn" title="Anterior (←)" aria-label="Slide anterior" disabled>←</button>
         <button id="nextBtn" class="nav-btn nav-next" title="Próximo (→)" aria-label="Próximo slide">→</button>
       </div>

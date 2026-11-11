@@ -67,20 +67,22 @@
         data-title="Sobre o Palestrante">
         <div class="deck-heading"><span class="eyebrow">APRESENTAÇÃO</span>
           <h1 class="title">Guilherme <span class="grad">Berson</span></h1>
-          <p class="subtitle">Engenheiro de Software &amp; Especialista em IA / Mobile</p>
+          <p class="subtitle">Engenheiro de Software Sênior</p>
+          <p class="subtitle">Professor TADS Unitins</p>
         </div>
         <div class="main-grid">
           <div class="panel cyan">
             <div class="big-icon">⌘</div>
             <h3>Carreira &amp; Atuação</h3>
-            <p>Engenheiro de Software com foco em ecossistema mobile (Android/iOS) e desenvolvimento de soluções
-              escaláveis.</p>
+            <p>Engenheiro de Software na Zup, atuando em projetos do Itaú, e professor do curso de Tecnologia em Análise
+              e Desenvolvimento de Sistemas (TADS) na UNITINS. Experiência em desenvolvimento Mobile (Android/iOS) e Web
+              com Angular, APIs REST, Git/GitHub, arquitetura de software e metodologias ágeis.</p>
           </div>
           <div class="panel violet">
             <div class="big-icon">🎓</div>
             <h3>Formação &amp; Especialidade</h3>
-            <p>Pós-graduado em Inteligência Artificial e Desenvolvimento Mobile, apaixonado por arquitetura de código e
-              práticas de versionamento.</p>
+            <p>Graduado em Sistemas de Informação pela Universidade Estadual do Tocantins (UNITINS) e pós-graduado em
+              Inteligência Artificial e Desenvolvimento Mobile pela Faculdade de Minas (FACUMINAS).</p>
           </div>
         </div>
         <div class="chip-row">
@@ -669,71 +671,287 @@
           conhecimento compartilhado. CI é opcional mas muito comum.</aside>
       </article>
       <!-- BLOCO ADICIONAL: PRÁTICAS PROFISSIONAIS -->
-      <article id="slide-25" data-slide="25" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min" data-title="Git como &lt;span class=&quot;grad&quot;&gt;processo de equipe&lt;/span&gt;">
+      <article id="slide-25" data-slide="25" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min"
+        data-title="Git como &lt;span class=&quot;grad&quot;&gt;processo de equipe&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Git como <span class="grad">processo de equipe</span></h1><p class="subtitle">Em empresas, versionar não é só guardar código: é coordenar entregas, qualidade e rastreabilidade.</p></div>
-        <div class="three-grid"><div class="panel cyan"><div class="big-icon">⌁</div><h3>Produto / tarefa</h3><p>Uma demanda nasce no backlog: bug, melhoria, história ou incidente. O ticket fornece contexto e critério de aceite.</p></div><div class="panel blue"><div class="big-icon">⑂</div><h3>Desenvolvimento</h3><p>Uma pessoa implementa em sua branch; colegas trabalham em paralelo e integram por pull requests.</p></div><div class="panel violet"><div class="big-icon">✓</div><h3>Qualidade e entrega</h3><p>Testes, revisão, validações e deploy conectam o commit ao software entregue ao usuário.</p></div></div><div class="callout"><strong>Exemplo ilustrativo:</strong> a tarefa APP-142 pede recuperação de senha; o histórico do Git mostra em quais commits e PRs a entrega foi realizada.</div>
-        <aside class="slide-notes">Pergunte quem já trabalhou com Jira, Azure Boards, Trello ou GitHub Issues. Explique que os rituais variam por empresa; Git não impõe processos ágeis.</aside>
+          <h1 class="title">Git como <span class="grad">processo de equipe</span></h1>
+          <p class="subtitle">Em empresas, versionar não é só guardar código: é coordenar entregas, qualidade e
+            rastreabilidade.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">⌁</div>
+            <h3>Produto / tarefa</h3>
+            <p>Uma demanda nasce no backlog: bug, melhoria, história ou incidente. O ticket fornece contexto e critério
+              de aceite.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">⑂</div>
+            <h3>Desenvolvimento</h3>
+            <p>Uma pessoa implementa em sua branch; colegas trabalham em paralelo e integram por pull requests.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">✓</div>
+            <h3>Qualidade e entrega</h3>
+            <p>Testes, revisão, validações e deploy conectam o commit ao software entregue ao usuário.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Exemplo ilustrativo:</strong> a tarefa APP-142 pede recuperação de senha; o
+          histórico do Git mostra em quais commits e PRs a entrega foi realizada.</div>
+        <aside class="slide-notes">Pergunte quem já trabalhou com Jira, Azure Boards, Trello ou GitHub Issues. Explique
+          que os rituais variam por empresa; Git não impõe processos ágeis.</aside>
       </article>
-      <article id="slide-26" data-slide="26" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min" data-title="Como nomear &lt;span class=&quot;grad&quot;&gt;suas branches&lt;/span&gt;">
+      <article id="slide-26" data-slide="26" class="slide slide-scroll" data-section="MERCADO" data-timing="1–2 min"
+        data-title="Como nomear &lt;span class=&quot;grad&quot;&gt;suas branches&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Como nomear <span class="grad">suas branches</span></h1><p class="subtitle">Nomes claros ajudam a conectar a mudança com o motivo e a tarefa do time.</p></div>
-        <div class="three-grid"><div class="panel cyan"><div class="big-icon">＋</div><h3>feature/</h3><p><code>feature/APP-142-recuperar-senha</code><br>Nova funcionalidade orientada ao ticket.</p></div><div class="panel blue"><div class="big-icon">⚒</div><h3>fix/ ou bugfix/</h3><p><code>fix/APP-187-login-500</code><br>Correção de defeito identificado.</p></div><div class="panel red"><div class="big-icon">⚡</div><h3>hotfix/</h3><p><code>hotfix/APP-201-pagamento</code><br>Correção prioritária, com fluxo definido pelo time.</p></div></div><div class="chip-row"><span class="chip">docs/atualizar-readme</span><span class="chip">refactor/servico-pedidos</span><span class="chip">chore/atualizar-deps</span></div><div class="callout"><strong>Convenção, não regra do Git:</strong> escolha um padrão e documente-o. Prefira nomes curtos, descritivos e consistentes; evite espaços.</div>
-        <aside class="slide-notes">Diferencie nome técnico de branch de requisito de ferramenta. Algumas equipes usam feat/, outras feature/, e outras só o número do ticket. Nunca apresente uma convenção interna como obrigatória.</aside>
+          <h1 class="title">Como nomear <span class="grad">suas branches</span></h1>
+          <p class="subtitle">Nomes claros ajudam a conectar a mudança com o motivo e a tarefa do time.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">＋</div>
+            <h3>feature/</h3>
+            <p><code>feature/APP-142-recuperar-senha</code><br>Nova funcionalidade orientada ao ticket.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">⚒</div>
+            <h3>fix/ ou bugfix/</h3>
+            <p><code>fix/APP-187-login-500</code><br>Correção de defeito identificado.</p>
+          </div>
+          <div class="panel red">
+            <div class="big-icon">⚡</div>
+            <h3>hotfix/</h3>
+            <p><code>hotfix/APP-201-pagamento</code><br>Correção prioritária, com fluxo definido pelo time.</p>
+          </div>
+        </div>
+        <div class="chip-row"><span class="chip">docs/atualizar-readme</span><span
+            class="chip">refactor/servico-pedidos</span><span class="chip">chore/atualizar-deps</span></div>
+        <div class="callout"><strong>Convenção, não regra do Git:</strong> escolha um padrão e documente-o. Prefira
+          nomes curtos, descritivos e consistentes; evite espaços.</div>
+        <aside class="slide-notes">Diferencie nome técnico de branch de requisito de ferramenta. Algumas equipes usam
+          feat/, outras feature/, e outras só o número do ticket. Nunca apresente uma convenção interna como
+          obrigatória.</aside>
       </article>
-      <article id="slide-27" data-slide="27" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Branch do ticket: &lt;span class=&quot;grad&quot;&gt;do início ao PR&lt;/span&gt;">
+      <article id="slide-27" data-slide="27" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min"
+        data-title="Branch do ticket: &lt;span class=&quot;grad&quot;&gt;do início ao PR&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Branch do ticket: <span class="grad">do início ao PR</span></h1><p class="subtitle">Exemplo de comandos para começar uma tarefa com a base atualizada.</p></div>
-        <div class="terminal"><div class="term-top"><div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">TERMINAL / bash</span><button class="copy-btn" title="Copiar comandos">COPIAR ↗</button></div><pre>git switch main
+          <h1 class="title">Branch do ticket: <span class="grad">do início ao PR</span></h1>
+          <p class="subtitle">Exemplo de comandos para começar uma tarefa com a base atualizada.</p>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">TERMINAL / bash</span><button
+              class="copy-btn" title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre>git switch main
 git pull --ff-only origin main
 git switch -c feature/APP-142-recuperar-senha
 # editar arquivos e executar testes
 git add .
 git commit -m &quot;feat(auth): adiciona recuperacao de senha&quot;
-git push -u origin feature/APP-142-recuperar-senha</pre></div><div class="callout"><strong>Em seguida:</strong> abra um PR da branch <code>feature/APP-142-recuperar-senha</code> para <code>main</code>. O <code>git add .</code> exige conferir o que será incluído com <code>git diff --cached</code>.</div>
-        <aside class="slide-notes">Explique que main deve existir localmente e origin precisa estar configurado. Com git pull --ff-only, caso haja divergência, a operação falha em vez de criar merge automático. Incentive commits pequenos e focados.</aside>
+git push -u origin feature/APP-142-recuperar-senha</pre>
+        </div>
+        <div class="callout"><strong>Em seguida:</strong> abra um PR da branch
+          <code>feature/APP-142-recuperar-senha</code> para <code>main</code>. O <code>git add .</code> exige conferir o
+          que será incluído com <code>git diff --cached</code>.
+        </div>
+        <aside class="slide-notes">Explique que main deve existir localmente e origin precisa estar configurado. Com git
+          pull --ff-only, caso haja divergência, a operação falha em vez de criar merge automático. Incentive commits
+          pequenos e focados.</aside>
       </article>
-      <article id="slide-28" data-slide="28" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Três devs, &lt;span class=&quot;grad&quot;&gt;um produto&lt;/span&gt;">
+      <article id="slide-28" data-slide="28" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min"
+        data-title="Três devs, &lt;span class=&quot;grad&quot;&gt;um produto&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Três devs, <span class="grad">um produto</span></h1><p class="subtitle">O trabalho é paralelo; a integração é coordenada.</p></div>
+          <h1 class="title">Três devs, <span class="grad">um produto</span></h1>
+          <p class="subtitle">O trabalho é paralelo; a integração é coordenada.</p>
+        </div>
         <div class="team-board">
-  <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA A</span><strong>Login social</strong><code>feature/APP-108-google-login</code><span class="team-status">PR #57 · aguardando review</span></div>
-  <div class="team-lane"><span class="mini-tag">DESENVOLVEDOR B</span><strong>Correção de carrinho</strong><code>fix/APP-119-total-carrinho</code><span class="team-status">PR #58 · checks aprovados</span></div>
-  <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA C</span><strong>Documentação da API</strong><code>docs/APP-123-endpoints</code><span class="team-status">PR #59 · ajustes pedidos</span></div>
- </div><div class="flow compact-flow"><div class="flow-step"><small>ISOLAMENTO</small><b>Branches</b></div><div class="flow-arrow">→</div><div class="flow-step"><small>VALIDAÇÃO</small><b>PR + CI</b></div><div class="flow-arrow">→</div><div class="flow-step"><small>INTEGRAÇÃO</small><b>main</b></div></div><div class="callout"><strong>Importante:</strong> uma branch por tarefa reduz interferências, mas não elimina conflitos quando arquivos e regras de negócio se sobrepõem.</div>
-        <aside class="slide-notes">Estes são exemplos fictícios de tickets e PRs para explicar situações usuais. Demonstre comunicação: alguém pode avisar quando alterar contratos compartilhados, componentes comuns ou migrations.</aside>
+          <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA A</span><strong>Login
+              social</strong><code>feature/APP-108-google-login</code><span class="team-status">PR #57 · aguardando
+              review</span></div>
+          <div class="team-lane"><span class="mini-tag">DESENVOLVEDOR B</span><strong>Correção de
+              carrinho</strong><code>fix/APP-119-total-carrinho</code><span class="team-status">PR #58 · checks
+              aprovados</span></div>
+          <div class="team-lane"><span class="mini-tag">DESENVOLVEDORA C</span><strong>Documentação da
+              API</strong><code>docs/APP-123-endpoints</code><span class="team-status">PR #59 · ajustes pedidos</span>
+          </div>
+        </div>
+        <div class="flow compact-flow">
+          <div class="flow-step"><small>ISOLAMENTO</small><b>Branches</b></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>VALIDAÇÃO</small><b>PR + CI</b></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><small>INTEGRAÇÃO</small><b>main</b></div>
+        </div>
+        <div class="callout"><strong>Importante:</strong> uma branch por tarefa reduz interferências, mas não elimina
+          conflitos quando arquivos e regras de negócio se sobrepõem.</div>
+        <aside class="slide-notes">Estes são exemplos fictícios de tickets e PRs para explicar situações usuais.
+          Demonstre comunicação: alguém pode avisar quando alterar contratos compartilhados, componentes comuns ou
+          migrations.</aside>
       </article>
-      <article id="slide-29" data-slide="29" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="O que acontece &lt;span class=&quot;grad&quot;&gt;antes do merge?&lt;/span&gt;">
+      <article id="slide-29" data-slide="29" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min"
+        data-title="O que acontece &lt;span class=&quot;grad&quot;&gt;antes do merge?&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">O que acontece <span class="grad">antes do merge?</span></h1><p class="subtitle">O pull request funciona como ponto de colaboração e controle de qualidade.</p></div>
-        <div class="four-grid"><div class="panel cyan"><div class="big-icon">01</div><h3>Descrição</h3><p>Objetivo, ticket, mudanças, evidências e como testar.</p></div><div class="panel blue"><div class="big-icon">02</div><h3>CI automatizada</h3><p>Build, testes, lint e verificações de segurança configuradas.</p></div><div class="panel violet"><div class="big-icon">03</div><h3>Code review</h3><p>Revisores analisam comportamento, legibilidade e riscos.</p></div><div class="panel cyan"><div class="big-icon">04</div><h3>Aprovação</h3><p>Depois de cumprir as regras do repositório, a alteração pode ser integrada.</p></div></div><div class="callout"><strong>Boas práticas:</strong> proteger <code>main</code>, exigir checks e aprovação quando adequado e evitar push direto em produção. Essas regras dependem da configuração do repositório.</div>
-        <aside class="slide-notes">Cite como recursos do GitHub as regras de proteção de branches, rulesets e CODEOWNERS. Explique que PR não é comando Git, e a equipe escolhe merge commit, squash ou rebase conforme política.</aside>
+          <h1 class="title">O que acontece <span class="grad">antes do merge?</span></h1>
+          <p class="subtitle">O pull request funciona como ponto de colaboração e controle de qualidade.</p>
+        </div>
+        <div class="four-grid">
+          <div class="panel cyan">
+            <div class="big-icon">01</div>
+            <h3>Descrição</h3>
+            <p>Objetivo, ticket, mudanças, evidências e como testar.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">02</div>
+            <h3>CI automatizada</h3>
+            <p>Build, testes, lint e verificações de segurança configuradas.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">03</div>
+            <h3>Code review</h3>
+            <p>Revisores analisam comportamento, legibilidade e riscos.</p>
+          </div>
+          <div class="panel cyan">
+            <div class="big-icon">04</div>
+            <h3>Aprovação</h3>
+            <p>Depois de cumprir as regras do repositório, a alteração pode ser integrada.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Boas práticas:</strong> proteger <code>main</code>, exigir checks e aprovação
+          quando adequado e evitar push direto em produção. Essas regras dependem da configuração do repositório.</div>
+        <aside class="slide-notes">Cite como recursos do GitHub as regras de proteção de branches, rulesets e
+          CODEOWNERS. Explique que PR não é comando Git, e a equipe escolhe merge commit, squash ou rebase conforme
+          política.</aside>
       </article>
-      <article id="slide-30" data-slide="30" class="slide slide-scroll" data-section="MERCADO" data-timing="1 min" data-title="Commits que contam &lt;span class=&quot;grad&quot;&gt;uma história&lt;/span&gt;">
+      <article id="slide-30" data-slide="30" class="slide slide-scroll" data-section="MERCADO" data-timing="1 min"
+        data-title="Commits que contam &lt;span class=&quot;grad&quot;&gt;uma história&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Commits que contam <span class="grad">uma história</span></h1><p class="subtitle">Mensagens consistentes tornam histórico, revisão e automações mais compreensíveis.</p></div>
-        <div class="main-grid"><div class="panel cyan"><div class="big-icon">✓</div><h3>Mensagens informativas</h3><p><code>feat(auth): adiciona login com Google</code><br><code>fix(cart): corrige total com cupom</code><br><code>docs(api): documenta endpoints</code></p></div><div class="panel red"><div class="big-icon">×</div><h3>Evite mensagens vagas</h3><p><code>ajustes</code><br><code>mudanças finais</code><br><code>corrigido agora vai</code><br>Não dizem o que mudou ou por quê.</p></div></div><div class="callout"><strong>Conventional Commits:</strong> <code>tipo(escopo): descrição</code> é uma convenção opcional. <code>feat</code> e <code>fix</code> podem orientar automações de release; mudanças incompatíveis exigem sinalização específica.</div>
-        <aside class="slide-notes">Não confunda commits com versões publicadas. Mensagens bem escritas são úteis mesmo sem automação de release. Explique o significado de feat, fix, docs e refactor.</aside>
+          <h1 class="title">Commits que contam <span class="grad">uma história</span></h1>
+          <p class="subtitle">Mensagens consistentes tornam histórico, revisão e automações mais compreensíveis.</p>
+        </div>
+        <div class="main-grid">
+          <div class="panel cyan">
+            <div class="big-icon">✓</div>
+            <h3>Mensagens informativas</h3>
+            <p>
+              <code>feat(auth): adiciona login com Google</code><br><code>fix(cart): corrige total com cupom</code><br><code>docs(api): documenta endpoints</code>
+            </p>
+          </div>
+          <div class="panel red">
+            <div class="big-icon">×</div>
+            <h3>Evite mensagens vagas</h3>
+            <p><code>ajustes</code><br><code>mudanças finais</code><br><code>corrigido agora vai</code><br>Não dizem o
+              que mudou ou por quê.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Conventional Commits:</strong> <code>tipo(escopo): descrição</code> é uma convenção
+          opcional. <code>feat</code> e <code>fix</code> podem orientar automações de release; mudanças incompatíveis
+          exigem sinalização específica.</div>
+        <aside class="slide-notes">Não confunda commits com versões publicadas. Mensagens bem escritas são úteis mesmo
+          sem automação de release. Explique o significado de feat, fix, docs e refactor.</aside>
       </article>
-      <article id="slide-31" data-slide="31" class="slide slide-scroll" data-section="RELEASES" data-timing="2 min" data-title="Versionar código × &lt;span class=&quot;grad&quot;&gt;versionar produto&lt;/span&gt;">
+      <article id="slide-31" data-slide="31" class="slide slide-scroll" data-section="RELEASES" data-timing="2 min"
+        data-title="Versionar código × &lt;span class=&quot;grad&quot;&gt;versionar produto&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Versionar código × <span class="grad">versionar produto</span></h1><p class="subtitle">Commits registram alterações; tags e releases identificam marcos entregáveis.</p></div>
-        <div class="three-grid"><div class="panel cyan"><div class="big-icon">1</div><h3>MAJOR · 2.0.0</h3><p>Mudança incompatível em uma API pública, conforme Semantic Versioning.</p></div><div class="panel blue"><div class="big-icon">2</div><h3>MINOR · 1.5.0</h3><p>Nova funcionalidade compatível com versões anteriores.</p></div><div class="panel violet"><div class="big-icon">3</div><h3>PATCH · 1.4.1</h3><p>Correção compatível de defeito.</p></div></div><div class="terminal"><div class="term-top"><div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">RELEASE / exemplo</span><button class="copy-btn" title="Copiar comandos">COPIAR ↗</button></div><pre>git tag -a v1.4.1 -m &quot;Release 1.4.1&quot;
+          <h1 class="title">Versionar código × <span class="grad">versionar produto</span></h1>
+          <p class="subtitle">Commits registram alterações; tags e releases identificam marcos entregáveis.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">1</div>
+            <h3>MAJOR · 2.0.0</h3>
+            <p>Mudança incompatível em uma API pública, conforme Semantic Versioning.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">2</div>
+            <h3>MINOR · 1.5.0</h3>
+            <p>Nova funcionalidade compatível com versões anteriores.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">3</div>
+            <h3>PATCH · 1.4.1</h3>
+            <p>Correção compatível de defeito.</p>
+          </div>
+        </div>
+        <div class="terminal">
+          <div class="term-top">
+            <div class="term-dots"><i></i><i></i><i></i></div><span class="term-caption">RELEASE / exemplo</span><button
+              class="copy-btn" title="Copiar comandos">COPIAR ↗</button>
+          </div>
+          <pre>git tag -a v1.4.1 -m &quot;Release 1.4.1&quot;
 git push origin v1.4.1
-git tag --list</pre></div><div class="callout"><strong>Atenção:</strong> SemVer faz sentido quando há um contrato de versão/API definido. A equipe decide sua estratégia de releases e a criação das tags.</div>
-        <aside class="slide-notes">Versão semântica não é a mesma coisa que o número do commit nem o nome da branch. Uma tag é uma referência Git a um ponto do histórico; uma release do GitHub pode acrescentar notas e artefatos.</aside>
+git tag --list</pre>
+        </div>
+        <div class="callout"><strong>Atenção:</strong> SemVer faz sentido quando há um contrato de versão/API definido.
+          A equipe decide sua estratégia de releases e a criação das tags.</div>
+        <aside class="slide-notes">Versão semântica não é a mesma coisa que o número do commit nem o nome da branch. Uma
+          tag é uma referência Git a um ponto do histórico; uma release do GitHub pode acrescentar notas e artefatos.
+        </aside>
       </article>
-      <article id="slide-32" data-slide="32" class="slide slide-scroll" data-section="RELEASES" data-timing="1 min" data-title="Estratégias de branches &lt;span class=&quot;grad&quot;&gt;no mercado&lt;/span&gt;">
+      <article id="slide-32" data-slide="32" class="slide slide-scroll" data-section="RELEASES" data-timing="1 min"
+        data-title="Estratégias de branches &lt;span class=&quot;grad&quot;&gt;no mercado&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Estratégias de branches <span class="grad">no mercado</span></h1><p class="subtitle">Não existe um único fluxo obrigatório: o processo acompanha o produto e a frequência de entrega.</p></div>
-        <div class="three-grid"><div class="panel cyan"><div class="big-icon">⑂</div><h3>GitHub Flow</h3><p>Uma main estável e branches curtas com PRs; adequado a entregas contínuas.</p></div><div class="panel blue"><div class="big-icon">⇄</div><h3>GitFlow</h3><p>Pode usar develop, feature, release e hotfix; mais etapas e branches de longa duração.</p></div><div class="panel violet"><div class="big-icon">∞</div><h3>Trunk-based</h3><p>Integrações frequentes em uma trunk; branches muito curtas e automação de testes.</p></div></div><div class="callout"><strong>Qual usar?</strong> Prefira o fluxo mais simples que cumpra as necessidades de revisão, testes, estabilidade e implantação do seu time.</div>
-        <aside class="slide-notes">Evite afirmar que toda empresa usa GitFlow. Em entregas contínuas, equipes frequentemente preferem branches curtas. Se usar feature flags, explique que mudanças incompletas podem ser integradas sem ficarem visíveis ao usuário.</aside>
+          <h1 class="title">Estratégias de branches <span class="grad">no mercado</span></h1>
+          <p class="subtitle">Não existe um único fluxo obrigatório: o processo acompanha o produto e a frequência de
+            entrega.</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">⑂</div>
+            <h3>GitHub Flow</h3>
+            <p>Uma main estável e branches curtas com PRs; adequado a entregas contínuas.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">⇄</div>
+            <h3>GitFlow</h3>
+            <p>Pode usar develop, feature, release e hotfix; mais etapas e branches de longa duração.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">∞</div>
+            <h3>Trunk-based</h3>
+            <p>Integrações frequentes em uma trunk; branches muito curtas e automação de testes.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Qual usar?</strong> Prefira o fluxo mais simples que cumpra as necessidades de
+          revisão, testes, estabilidade e implantação do seu time.</div>
+        <aside class="slide-notes">Evite afirmar que toda empresa usa GitFlow. Em entregas contínuas, equipes
+          frequentemente preferem branches curtas. Se usar feature flags, explique que mudanças incompletas podem ser
+          integradas sem ficarem visíveis ao usuário.</aside>
       </article>
-      <article id="slide-33" data-slide="33" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min" data-title="Desafio de equipe: &lt;span class=&quot;grad&quot;&gt;decida o fluxo&lt;/span&gt;">
+      <article id="slide-33" data-slide="33" class="slide slide-scroll" data-section="MERCADO" data-timing="2 min"
+        data-title="Desafio de equipe: &lt;span class=&quot;grad&quot;&gt;decida o fluxo&lt;/span&gt;">
         <div class="deck-heading"><span class="eyebrow">GIT NO MERCADO</span>
-          <h1 class="title">Desafio de equipe: <span class="grad">decida o fluxo</span></h1><p class="subtitle">Situação: uma funcionalidade está pronta, mas a main recebeu alterações de outros desenvolvedores.</p></div>
-        <div class="panel violet"><span class="mini-tag">CASO PRÁTICO / DISCUSSÃO</span><h3>Você é responsável pela tarefa APP-142</h3><p>Seu PR falhou em um teste e há conflito no arquivo de rotas. O deploy de hoje depende da estabilidade da main. O que você faz?</p></div><div class="three-grid"><div class="panel cyan"><div class="big-icon">01</div><h3>Investigar</h3><p>Consultar o resultado do CI e reproduzir a falha localmente.</p></div><div class="panel blue"><div class="big-icon">02</div><h3>Sincronizar</h3><p>Atualizar a branch com a base, resolver conflitos e executar testes.</p></div><div class="panel violet"><div class="big-icon">03</div><h3>Revalidar</h3><p>Publicar as correções, responder ao review e aguardar os checks exigidos.</p></div></div><div class="callout"><strong>Mensagem central:</strong> não faça merge apenas para “destravar” o pipeline. Integração é responsabilidade compartilhada.</div>
-        <aside class="slide-notes">Use 60 segundos de discussão com a plateia. Uma solução possível é git fetch origin e git merge origin/main enquanto estiver na feature branch; em outras equipes pode-se usar rebase com cuidado, especialmente se a branch é compartilhada. Não forçar push em main.</aside>
+          <h1 class="title">Desafio de equipe: <span class="grad">decida o fluxo</span></h1>
+          <p class="subtitle">Situação: uma funcionalidade está pronta, mas a main recebeu alterações de outros
+            desenvolvedores.</p>
+        </div>
+        <div class="panel violet"><span class="mini-tag">CASO PRÁTICO / DISCUSSÃO</span>
+          <h3>Você é responsável pela tarefa APP-142</h3>
+          <p>Seu PR falhou em um teste e há conflito no arquivo de rotas. O deploy de hoje depende da estabilidade da
+            main. O que você faz?</p>
+        </div>
+        <div class="three-grid">
+          <div class="panel cyan">
+            <div class="big-icon">01</div>
+            <h3>Investigar</h3>
+            <p>Consultar o resultado do CI e reproduzir a falha localmente.</p>
+          </div>
+          <div class="panel blue">
+            <div class="big-icon">02</div>
+            <h3>Sincronizar</h3>
+            <p>Atualizar a branch com a base, resolver conflitos e executar testes.</p>
+          </div>
+          <div class="panel violet">
+            <div class="big-icon">03</div>
+            <h3>Revalidar</h3>
+            <p>Publicar as correções, responder ao review e aguardar os checks exigidos.</p>
+          </div>
+        </div>
+        <div class="callout"><strong>Mensagem central:</strong> não faça merge apenas para “destravar” o pipeline.
+          Integração é responsabilidade compartilhada.</div>
+        <aside class="slide-notes">Use 60 segundos de discussão com a plateia. Uma solução possível é git fetch origin e
+          git merge origin/main enquanto estiver na feature branch; em outras equipes pode-se usar rebase com cuidado,
+          especialmente se a branch é compartilhada. Não forçar push em main.</aside>
       </article>
       <!-- Slide 25: Desfazer alterações -->
       <article id="slide-34" data-slide="34" class="slide slide-scroll" data-section="SEGURANÇA" data-timing="2 min"
